@@ -1,3 +1,5 @@
+Онлайн: https://starchenkovmaksim-svg.github.io/uworldtrainer/
+
 UWorld Trainer — блоки 1–21
 
 Распакуйте архив целиком и откройте index.html в браузере. Интернет не нужен.
