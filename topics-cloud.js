@@ -10,7 +10,7 @@
     message('Облако ещё не подключено. Прогресс сохраняется только в этом браузере.');
     return;
   }
-  let client, userId = null, pending = {}, baseline = {}, busy = false, epoch = 0;
+  let authUI, client, userId = null, pending = {}, baseline = {}, busy = false, epoch = 0;
   let applying = false, timer, storageFailed = false;
   const model = window.ProgressModel;
   const cacheKey = () => `uworld_topics_cloud_v1:${config.supabaseUrl}:${userId}`;
@@ -91,7 +91,7 @@
     userId = nextId;
     window.trainer.cloudUser = userId;
     pending = {};
-    login.classList.toggle('hide', !!userId);
+    
     logout.classList.toggle('hide', !userId);
     retry.classList.toggle('hide', !userId);
     account.textContent = session?.user?.email || '';
@@ -118,26 +118,12 @@
       document.head.append(script);
     });
     client = window.supabase.createClient(config.supabaseUrl, config.supabasePublishableKey);
-    login.classList.remove('hide');
+    authUI = window.TrainerAuth.mount(client);
     message('Войдите с той же почтой на всех устройствах.');
     client.auth.onAuthStateChange((_event, session) => {
       // Keep async Supabase calls outside the auth callback lock.
-      setTimeout(() => sessionChanged(session), 0);
+      setTimeout(() => { authUI.session(session, _event); sessionChanged(session); }, 0);
     });
-    login.onsubmit = async event => {
-      event.preventDefault();
-      const button = login.querySelector('button');
-      button.disabled = true;
-      try {
-        const {error} = await client.auth.signInWithOtp({
-          email: document.getElementById('email').value.trim(),
-          options: {emailRedirectTo: new URL('./', location.href).href}
-        });
-        if (error) throw error;
-        message('Письмо отправлено. Откройте ссылку на этом устройстве.');
-      } catch (_) { message('Не удалось отправить письмо. Проверьте адрес и попробуйте позже.'); }
-      finally { button.disabled = false; }
-    };
     logout.onclick = async () => {
       logout.disabled = true;
       try {
@@ -158,6 +144,7 @@
     setInterval(() => { if (!document.hidden) sync(); }, 15000);
     const {data, error} = await client.auth.getSession();
     if (error) throw error;
+    authUI.session(data.session);
     await sessionChanged(data.session);
   } catch (_) {
     message('Не удалось подключить облако. Проверьте интернет и обновите страницу.');

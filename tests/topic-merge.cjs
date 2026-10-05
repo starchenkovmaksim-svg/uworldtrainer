@@ -1,0 +1,12 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');const root=__dirname+'/..';const ctx=vm.createContext({window:{}});
+for(const name of ['topics-data.js','topics-data-2024.js','topics-organization.js','progress.js'])vm.runInContext(fs.readFileSync(root+'/'+name,'utf8'),ctx);
+const blocks=vm.runInContext('BLOCKS',ctx),model=ctx.window.ProgressModel,b=blocks.find(b=>b.n==='topic-rheumatology'),second='topic-2024-rheumatology-orthopedics-sports';
+assert.equal(blocks.length,20);assert.equal(b.title,'Rheumatology - Orthopedics & Sports');assert.equal(b.questions.length,291);assert.ok(blocks.every(b=>!b.title.includes('UW 2024')));
+const make=(length,index,answer)=>({answers:Array.from({length},(_,i)=>i===index?answer:null),submitted:Array.from({length},(_,i)=>i===index),marked:Array.from({length},(_,i)=>i===index),grades:Array.from({length},(_,i)=>i===index?true:null),last:index});
+const guest={[b.n]:make(119,2,b.questions[2].correct),[second]:make(172,3,b.questions[122].correct)};
+const merged=ctx.window.migrateTopicStates(guest);assert.equal(merged[b.n].answers[2],b.questions[2].correct);assert.equal(merged[b.n].answers[122],b.questions[122].correct);assert.equal(merged[b.n].last,122);assert.equal(ctx.window.migrateTopicStates(merged)[b.n],merged[b.n]);
+const entries={['topic-rheumatology:2']:{answer:b.questions[2].correct,submitted:true,marked:true},[second+':3']:{answer:b.questions[122].correct,submitted:true,marked:true},[second+':last']:3};
+const expanded=model.expand(entries,blocks);assert.equal(expanded[b.n].answers[122],b.questions[122].correct);assert.equal(expanded[b.n].grades[2],true);assert.equal(expanded[b.n].last,122);
+const baseline=model.flatten(expanded,blocks);expanded[b.n].marked[122]=false;const patch=model.diff(baseline,model.flatten(expanded,blocks));assert.deepEqual(Object.keys(patch),[second+':3']);assert.equal(patch[second+':3'].marked,false);
+const cleared=model.flatten({},blocks);assert.equal(cleared[second+':3'].answer,null);assert.equal(cleared['topic-rheumatology:2'].answer,null);
+console.log('PASS: 291-question merged topic, guest migration, legacy cloud answers, stable keys, idempotence and reset');

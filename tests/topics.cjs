@@ -24,7 +24,8 @@ const original=vm.runInContext('JSON.stringify(BLOCKS)',context);
 vm.runInContext(fs.readFileSync(path.join(root,'topics-data-2024.js'),'utf8'),context);
 assert.equal(vm.runInContext('JSON.stringify(BLOCKS.slice(0,13))',context),original);
 const blocks=vm.runInContext('BLOCKS',context);
-assert.equal(blocks.length,21);
+vm.runInContext(fs.readFileSync(path.join(root,'topics-organization.js'),'utf8'),context);
+assert.equal(blocks.length,20);
 let total=0;
 for(const b of blocks){assert.ok(b.n.startsWith('topic-'));assert.ok(b.questions.length);for(const q of b.questions){total++;assert.ok(q.questionImages.length);assert.ok(q.explanationImages.length);assert.ok(!q.correct||q.choices.includes(q.correct));for(const src of [...q.questionImages,...q.explanationImages,...q.contextImages||[]])assert.ok(assetExists(src),src)}}
 const html=fs.readFileSync(path.join(root,'topics.html'),'utf8');

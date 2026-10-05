@@ -26,6 +26,7 @@ const client = {
 };
 let visible;
 const win = {
+  TrainerAuth:{mount:()=>({session(){}})},
   TRAINER_CONFIG:{supabaseUrl:'https://test.supabase.co',supabasePublishableKey:'test'},
   supabase:{createClient:()=>client},
   trainer:{replace(states){visible=states;}},

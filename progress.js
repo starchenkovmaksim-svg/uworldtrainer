@@ -4,9 +4,9 @@ window.ProgressModel = {
     const entries = {};
     for (const b of blocks) {
       const s = states[b.n];
-      entries[`${b.n}:last`] = s?.last || 0;
+      entries[b.progressLastKey || `${b.n}:last`] = s?.last || 0;
       b.questions.forEach((q, i) => {
-        entries[`${b.n}:${i}`] = {
+        entries[q.progressKey || `${b.n}:${i}`] = {
           answer: s?.answers?.[i] ?? null,
           submitted: s?.submitted?.[i] === true,
           marked: s?.marked?.[i] === true,
@@ -20,10 +20,16 @@ window.ProgressModel = {
     const result = {};
     for (const b of blocks) {
       const s = {answers: [], submitted: [], marked: [], grades: [], last: 0};
-      const last = entries[`${b.n}:last`];
+      let last = entries[b.progressLastKey || `${b.n}:last`];
+      if (!Number.isInteger(last) && b.legacyLast) {
+        last = 0;
+        for (const legacy of b.legacyLast) {
+          if (Number.isInteger(entries[legacy.key]) && entries[legacy.key] > 0) last = legacy.offset + entries[legacy.key];
+        }
+      }
       if (Number.isInteger(last)) s.last = Math.max(0, Math.min(last, b.questions.length - 1));
       b.questions.forEach((q, i) => {
-        const v = entries[`${b.n}:${i}`] || {};
+        const v = entries[q.progressKey || `${b.n}:${i}`] || {};
         const answer = q.choices.includes(v.answer) ? v.answer : null;
         const submitted = !!answer && v.submitted === true;
         s.answers.push(answer);
