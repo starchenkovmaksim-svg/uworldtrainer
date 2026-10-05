@@ -1,5 +1,11 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
 const root=path.join(__dirname,'..');
+function assetExists(src){
+ if(!src.startsWith('https:'))return fs.existsSync(path.join(root,src));
+ assert.match(src,/^https:\/\/starchenkovmaksim-svg\.github\.io\/uworldtrainer-2024-assets\/assets\/[a-z0-9-]+\/[a-z0-9-]+\.webp$/);
+ const assets=path.join(root,'..','uworldtrainer-2024-assets');
+ return !fs.existsSync(assets)||fs.existsSync(path.join(assets,src.split('/uworldtrainer-2024-assets/')[1]));
+}
 const elements=new Map(), storage=new Map();
 function element(id='') {
  const classes=new Set(['quiz','summary','explain','selfGrade'].includes(id)?['hide']:[]);
@@ -14,12 +20,15 @@ const get=id=>{if(!elements.has(id))elements.set(id,element(id));return elements
 const win={};
 const context=vm.createContext({window:win,document:{getElementById:get,createElement:()=>element(),addEventListener(){}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},scrollTo(){},confirm:()=>true,console});
 vm.runInContext(fs.readFileSync(path.join(root,'topics-data.js'),'utf8'),context);
+const original=vm.runInContext('JSON.stringify(BLOCKS)',context);
+vm.runInContext(fs.readFileSync(path.join(root,'topics-data-2024.js'),'utf8'),context);
+assert.equal(vm.runInContext('JSON.stringify(BLOCKS.slice(0,13))',context),original);
 const blocks=vm.runInContext('BLOCKS',context);
-assert.equal(blocks.length,process.argv.includes('--partial')?3:13);
+assert.equal(blocks.length,21);
 let total=0;
-for(const b of blocks){assert.ok(b.n.startsWith('topic-'));assert.ok(b.questions.length);for(const q of b.questions){total++;assert.ok(q.questionImages.length);assert.ok(q.explanationImages.length);assert.ok(!q.correct||q.choices.includes(q.correct));for(const src of [...q.questionImages,...q.explanationImages,...q.contextImages||[]])assert.ok(fs.existsSync(path.join(root,src)),src)}}
+for(const b of blocks){assert.ok(b.n.startsWith('topic-'));assert.ok(b.questions.length);for(const q of b.questions){total++;assert.ok(q.questionImages.length);assert.ok(q.explanationImages.length);assert.ok(!q.correct||q.choices.includes(q.correct));for(const src of [...q.questionImages,...q.explanationImages,...q.contextImages||[]])assert.ok(assetExists(src),src)}}
 const html=fs.readFileSync(path.join(root,'topics.html'),'utf8');
-if(!process.argv.includes('--partial'))assert.equal(total,2849);
+if(!process.argv.includes('--partial'))assert.equal(total,4188);
 for(const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g))vm.runInContext(m[1],context);
 assert.equal(get('blockList').children.length,blocks.length);
 get('topicSearch').value='endocr';get('topicSearch').oninput();assert.equal(get('blockList').children.filter(e=>!e.hidden).length,1);
@@ -54,3 +63,17 @@ assert.deepEqual(merged['1:0'],old['1:0']);
 assert.equal(model.expand(merged,blocks)[blocks[0].n].answers[0],'C');
 for(const name of ['topics-cloud.js','topics-data.js'])new vm.Script(fs.readFileSync(path.join(root,name),'utf8'));
 console.log(`PASS: ${blocks.length} topics, ${total} questions, every asset exists; search, answer, grading, explanation gating, navigation, local storage and progress isolation`);
+
+const manualTopic=blocks.find(b=>b.n.startsWith('topic-2024-')&&b.questions.some(q=>!q.correct));
+const manualIndex=manualTopic.questions.findIndex(q=>!q.correct);
+vm.runInContext(`openBlock(${JSON.stringify(manualTopic.n)},${manualIndex})`,context);
+assert.ok(get('explain').classList.contains('hide'));
+get('choices').children[0].click();get('submit').click();
+assert.ok(!get('selfGrade').classList.contains('hide'));
+get('gradeYes').click();
+assert.equal(JSON.parse(storage.get('uworld_topics_guest_v1'))[manualTopic.n].grades[manualIndex],true);
+const extraTopic=blocks.find(b=>b.extraImages?.length);
+vm.runInContext(`openBlock(${JSON.stringify(extraTopic.n)},0)`,context);
+assert.equal(get('sourceExtraImages').children.length,1);
+assert.ok(!get('sourceExtra').classList.contains('hide'));
+console.log('PASS: old topic data unchanged, new manual grading and incomplete source page');
