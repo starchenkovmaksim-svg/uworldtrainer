@@ -97,6 +97,9 @@ window.TrainerAuth = {
     setMode('login');
     return {session(session,event) {
       activeUser = session?.user?.id || null;
+      $('accountOpen').title = activeUser ? 'Аккаунт: ' + session.user.email : 'Войти в аккаунт';
+      $('accountOpen').setAttribute('aria-label', $('accountOpen').title);
+      $('accountDot').classList.toggle('hide',!activeUser);
       $('authGuest').classList.toggle('hide',!!activeUser);
       $('authSetPassword').classList.toggle('hide',!activeUser);
       if (!activeUser) {
@@ -104,6 +107,7 @@ window.TrainerAuth = {
         for (const id of ['password','passwordConfirm','newPassword','newPasswordConfirm']) $(id).value = '';
       }
       if (event === 'PASSWORD_RECOVERY' && activeUser) {
+        if (!$('accountDialog').open) $('accountDialog').showModal();
         $('passwordForm').classList.remove('hide');
         say('Введите новый пароль для своего аккаунта.');
       }

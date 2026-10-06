@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=__dirname+'/..',elements=new Map(),calls=[];let fail;
-function el(id){if(!elements.has(id)){const set=new Set();elements.set(id,{value:'',textContent:'',disabled:false,reportValidity:()=>true,classList:{add:x=>set.add(x),remove:x=>set.delete(x),contains:x=>set.has(x),toggle(x,on){on??=!set.has(x);on?set.add(x):set.delete(x)}}});}return elements.get(id);}
+function el(id){if(!elements.has(id)){const set=new Set();elements.set(id,{value:'',textContent:'',disabled:false,setAttribute(){},showModal(){this.open=true;},reportValidity:()=>true,classList:{add:x=>set.add(x),remove:x=>set.delete(x),contains:x=>set.has(x),toggle(x,on){on??=!set.has(x);on?set.add(x):set.delete(x)}}});}return elements.get(id);}
 const auth=Object.fromEntries(['signUp','signInWithPassword','signInWithOtp','resetPasswordForEmail','updateUser','resend'].map(name=>[name,async(...args)=>{calls.push([name,...args]);return fail?{error:{code:fail}}:{data:{session:null}}}]));
 const ctx=vm.createContext({window:{},document:{getElementById:el},URL,location:{href:'https://example.com/trainer/topics.html'}});
 vm.runInContext(fs.readFileSync(root+'/auth-ui.js','utf8'),ctx);

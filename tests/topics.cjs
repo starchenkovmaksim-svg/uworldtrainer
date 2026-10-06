@@ -2,7 +2,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
 const root=path.join(__dirname,'..');
 function assetExists(src){
  if(!src.startsWith('https:'))return fs.existsSync(path.join(root,src));
- assert.match(src,/^https:\/\/starchenkovmaksim-svg\.github\.io\/uworldtrainer-2024-assets\/assets\/[a-z0-9-]+\/[a-z0-9-]+\.webp$/);
+ assert.match(src,/^https:\/\/starchenkovmaksim-svg\.github\.io\/uworldtrainer-2024-assets\/(?:assets\/[a-z0-9-]+|repairs)\/[a-z0-9-]+\.webp$/);
  const assets=path.join(root,'..','uworldtrainer-2024-assets');
  return !fs.existsSync(assets)||fs.existsSync(path.join(assets,src.split('/uworldtrainer-2024-assets/')[1]));
 }
@@ -28,6 +28,7 @@ vm.runInContext(fs.readFileSync(path.join(root,'topics-organization.js'),'utf8')
 assert.equal(blocks.length,20);
 let total=0;
 for(const b of blocks){assert.ok(b.n.startsWith('topic-'));assert.ok(b.questions.length);for(const q of b.questions){total++;assert.ok(q.questionImages.length);assert.ok(q.explanationImages.length);assert.ok(!q.correct||q.choices.includes(q.correct));for(const src of [...q.questionImages,...q.explanationImages,...q.contextImages||[]])assert.ok(assetExists(src),src)}}
+vm.runInContext(fs.readFileSync(path.join(root,'question-repairs.js'),'utf8'),context);
 const html=fs.readFileSync(path.join(root,'topics.html'),'utf8');
 if(!process.argv.includes('--partial'))assert.equal(total,4188);
 for(const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g))vm.runInContext(m[1],context);
@@ -65,8 +66,9 @@ assert.equal(model.expand(merged,blocks)[blocks[0].n].answers[0],'C');
 for(const name of ['topics-cloud.js','topics-data.js'])new vm.Script(fs.readFileSync(path.join(root,name),'utf8'));
 console.log(`PASS: ${blocks.length} topics, ${total} questions, every asset exists; search, answer, grading, explanation gating, navigation, local storage and progress isolation`);
 
-const manualTopic=blocks.find(b=>b.n.startsWith('topic-2024-')&&b.questions.some(q=>!q.correct));
-const manualIndex=manualTopic.questions.findIndex(q=>!q.correct);
+assert.ok(blocks.every(b=>b.questions.every(q=>q.correct)));
+const manualTopic=blocks.at(-1),manualIndex=manualTopic.questions.length-1;
+manualTopic.questions[manualIndex].correct=null; // Explicit fixture for fallback UI.
 vm.runInContext(`openBlock(${JSON.stringify(manualTopic.n)},${manualIndex})`,context);
 assert.ok(get('explain').classList.contains('hide'));
 get('choices').children[0].click();get('submit').click();
