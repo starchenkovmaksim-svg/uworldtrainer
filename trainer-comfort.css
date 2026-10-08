@@ -21,3 +21,15 @@ html[data-theme=dark]{color-scheme:dark;--bg:#151b23;--ink:#e1e8f0;--muted:#a4b3
 [data-theme=dark] .source,[data-theme=dark] .exam-image,[data-theme=dark] .image-dialog img{background:#fff;filter:none}
 [data-theme=dark] .report-dialog #reportStatus:not(:empty){background:#203d32;color:#a2e0ba}
 @media(max-width:700px){.theme-toggle{padding:8px;font-size:11px;margin-left:0}.top{gap:6px}.top>div:first-child{flex:1;min-width:140px}.question-dock{top:4px;gap:6px;flex-wrap:wrap;padding:8px 10px}.dock-title{width:100%;font-size:12px}.dock-actions{justify-content:space-between;width:100%}.dock-actions .btn{padding:7px 12px}.toolbar .dock-actions{width:auto}.exam-dock{font-size:12px}.action-toast{font-size:12px}.exam-map{position:static}}
+
+/* Night palette: tinted graphite, clear outlines, no white enamel fills. */
+[data-theme=dark] .topic-cover,[data-theme=dark] .catalog-card .topic-cover{
+  background:color-mix(in srgb,var(--cover-bg) 8%,#18212b);
+  color:color-mix(in srgb,var(--cover-ink) 32%,#d5e0ec);
+}
+[data-theme=dark] .topic-cover .wash{fill:currentColor;fill-opacity:.09;stroke:none}
+[data-theme=dark] .topic-cover .paper{fill:currentColor;fill-opacity:.08}
+[data-theme=dark] .topic-cover .glint{fill:currentColor;fill-opacity:.7;stroke:none}
+[data-theme=dark] .topic-cover .detail{opacity:.78;stroke-width:1.9}
+[data-theme=dark] .topic-cover .paper-line{stroke-width:2.45}
+[data-theme=dark] .topic-cover::before,[data-theme=dark] .topic-cover::after{border-color:#b5c9df0b;background:transparent}
