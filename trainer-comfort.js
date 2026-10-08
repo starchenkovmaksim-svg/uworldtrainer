@@ -10,9 +10,13 @@
   window.TrainerFeedback={notify};
   if($('quiz')){
     const dock=document.createElement('div');dock.className='question-dock';dock.setAttribute('aria-label','Быстрая навигация по вопросу');
-    dock.innerHTML='<span class="dock-title"></span><div class="dock-actions"><button class="btn outline" type="button" data-proxy="prev" aria-label="Предыдущий вопрос">←</button><button class="btn outline dock-mark" type="button" data-proxy="mark">☆ Отметить</button><button class="btn outline" type="button" data-proxy="next" aria-label="Следующий вопрос или итоги">→</button></div>';
+    dock.innerHTML='<span class="dock-title"></span><div class="dock-actions"><button class="btn outline dock-mark" type="button" data-proxy="mark">☆ Отметить</button></div>';
     $('quiz').prepend(dock);
-    function sync(){dock.querySelector('.dock-title').textContent=$('qTitle').textContent;const mark=dock.querySelector('[data-proxy="mark"]');mark.textContent=$('mark').textContent;mark.setAttribute('aria-pressed',String($('mark').textContent.startsWith('★')));dock.querySelector('[data-proxy="prev"]').disabled=$('prev').disabled;dock.querySelector('[data-proxy="next"]').disabled=$('next').disabled;}
+    const actions=$('submit').parentElement;actions.classList.add('answer-actions');actions.append($('next'));
+    $('prev').parentElement.append($('homeBtn'));$('mark').hidden=true;
+    function primaryAction(){const reviewed=!$('explain').classList.contains('hide');$('submit').classList.toggle('primary',!reviewed);$('submit').classList.toggle('outline',reviewed);$('next').classList.toggle('primary',reviewed);$('next').classList.toggle('outline',!reviewed);}
+    new MutationObserver(primaryAction).observe($('explain'),{attributes:true,attributeFilter:['class']});primaryAction();
+    function sync(){dock.querySelector('.dock-title').textContent=$('qTitle').textContent;const mark=dock.querySelector('[data-proxy="mark"]');mark.textContent=$('mark').textContent;mark.setAttribute('aria-pressed',String($('mark').textContent.startsWith('★')));}
     dock.onclick=e=>{const b=e.target.closest('[data-proxy]');if(b&&!b.disabled)$(b.dataset.proxy).click();};
     const observer=new MutationObserver(sync);for(const id of ['qTitle','mark','prev','next'])observer.observe($(id),{childList:true,subtree:true,attributes:true,attributeFilter:['disabled']});sync();
   }

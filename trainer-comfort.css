@@ -33,3 +33,7 @@ html[data-theme=dark]{color-scheme:dark;--bg:#151b23;--ink:#e1e8f0;--muted:#a4b3
 [data-theme=dark] .topic-cover .detail{opacity:.78;stroke-width:1.9}
 [data-theme=dark] .topic-cover .paper-line{stroke-width:2.45}
 [data-theme=dark] .topic-cover::before,[data-theme=dark] .topic-cover::after{border-color:#b5c9df0b;background:transparent}
+
+/* One clear next action in untimed practice. */
+.answer-actions{margin-top:16px}.answer-actions #next{margin-left:auto;min-width:130px}.answer-actions #submit{min-width:165px}.question-dock .dock-actions{width:auto}.question-dock .dock-title{width:auto;flex:1}.question-dock{flex-wrap:nowrap}.question-dock .dock-mark{white-space:nowrap}#quiz .nav #homeBtn{font-size:12px;font-weight:500}#quiz .report-trigger{background:transparent;border-color:transparent;padding-left:0;font-size:12px}
+@media(max-width:450px){.answer-actions{gap:8px}.answer-actions #submit,.answer-actions #next{min-width:0;flex:1;padding:11px 8px;font-size:12px}.question-dock .dock-title{font-size:11px}.question-dock .dock-mark{font-size:11px;padding:7px 9px}}
