@@ -1,0 +1,26 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UWorld · Зачёты и экзамены</title><link rel="stylesheet" href="exam.css"></head><body><main class="app">
+<header class="top"><div><div class="brand">UWorld · Trainer</div><div class="small">Step 1 · зачёты и экзамены</div></div><button id="accountOpen" class="account-icon" type="button" title="Войти в аккаунт" aria-label="Войти в аккаунт"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span id="accountDot" class="account-dot hide"></span></button></header>
+<nav class="row" aria-label="Разделы тренажёра"><a class="btn outline" href="./">Блоки 1–21</a><a class="btn outline" href="topics.html">Задачи по темам</a><button id="examHome" class="btn primary">Зачёты и экзамены</button></nav>
+<p id="examSync" class="small" role="status">Подключаем сохранение…</p>
+<div id="lockNotice" class="notice hide"></div>
+<section id="examContent" aria-label="Экзамен"></section>
+</main><dialog id="accountDialog" class="account-dialog"><div class="row between" style="margin-bottom:18px"><h2 style="margin:0">Аккаунт</h2><button id="accountClose" class="btn outline" type="button" aria-label="Закрыть аккаунт">✕</button></div><section aria-label="Аккаунт и синхронизация">
+<div class="row between"><strong>Мой прогресс</strong><span id="account" class="small"></span></div>
+<p id="syncStatus" role="status" aria-live="polite">Прогресс сохраняется в этом браузере.</p>
+<div id="authPanel" class="hide">
+<div id="authGuest"><div class="row"><button type="button" id="authLogin" class="btn primary">Вход</button><button type="button" id="authSignup" class="btn outline">Регистрация</button></div>
+<form id="loginForm" class="row" style="margin-top:12px">
+<label>Почта <input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+<label id="passwordLabel">Пароль <input id="password" type="password" autocomplete="current-password" required></label>
+<label id="confirmLabel" class="hide">Повторите пароль <input id="passwordConfirm" type="password" autocomplete="new-password"></label>
+<button id="authSubmit" class="btn primary" type="submit">Войти</button></form>
+<p id="authHint" class="small">Войдите с той же почтой на всех устройствах. До входа прогресс хранится только в этом браузере.</p>
+<div class="row"><button type="button" id="authReset" class="btn outline">Забыли пароль?</button><button type="button" id="authMagic" class="btn outline">Войти по ссылке</button><button type="button" id="authResend" class="btn outline">Повторить подтверждение почты</button></div></div>
+<button type="button" id="authSetPassword" class="btn outline hide">Задать / сменить пароль</button>
+<form id="passwordForm" class="hide" style="margin-top:12px"><p>Задайте пароль для этого аккаунта. Прогресс останется на месте.</p><div class="row"><label>Новый пароль <input id="newPassword" type="password" autocomplete="new-password" minlength="8" required></label><label>Повторите пароль <input id="newPasswordConfirm" type="password" autocomplete="new-password" minlength="8" required></label><button id="passwordSave" type="submit" class="btn primary">Сохранить пароль</button></div></form>
+<p id="authStatus" role="status" aria-live="polite" class="small"></p></div>
+<div class="row"><button id="syncNow" class="btn outline hide">Синхронизировать</button><button id="logout" class="btn outline hide">Выйти</button></div></section></dialog>
+<dialog id="setupDialog" class="account-dialog" aria-labelledby="setupTitle"><h2 id="setupTitle"></h2><div id="setupBody"></div><div class="row"><button id="startExam" class="btn primary">Начать попытку</button><button id="cancelSetup" class="btn outline">Отмена</button></div></dialog>
+<dialog id="endDialog" class="account-dialog" aria-labelledby="endTitle"><h2 id="endTitle">Завершить блок?</h2><p id="endDetails"></p><p>Вернуться к ответам этого блока будет нельзя. Объяснения откроются после завершения всей попытки.</p><div class="row"><button id="confirmEnd" class="btn primary">Завершить блок</button><button id="cancelEnd" class="btn outline">Вернуться к вопросам</button></div></dialog>
+<dialog id="imageDialog" class="image-dialog"><button id="closeImage" class="btn">Закрыть ✕</button><img id="largeImage" alt="Увеличенное условие"></dialog>
+<script src="config.js"></script><script src="account-panel.js"></script><script src="auth-ui.js"></script><script src="exam-core.js"></script><script src="exam-bank.js"></script><script src="exam-store.js"></script><script src="exam-app.js"></script></body></html>

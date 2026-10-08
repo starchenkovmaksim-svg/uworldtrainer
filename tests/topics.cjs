@@ -35,7 +35,8 @@ for(const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g))vm.runInContext(m[
 assert.equal(get('blockList').children.length,blocks.length);
 get('topicSearch').value='endocr';get('topicSearch').oninput();assert.equal(get('blockList').children.filter(e=>!e.hidden).length,1);
 get('topicSearch').value='';get('topicSearch').oninput();
-get('blockList').children[0].click();
+assert.match(get('blockList').children[0].children[1].href,/exams\.html\?topic=/);
+get('blockList').children[0].children[0].click();
 assert.ok(!get('quiz').classList.contains('hide'));
 assert.ok(get('explain').classList.contains('hide'));
 assert.equal(get('explainImages').children.length,0);

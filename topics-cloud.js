@@ -24,6 +24,7 @@
     }
   };
   const apply = entries => {
+    window.ExamBadges?.update(entries, userId);
     baseline = model.flatten(model.expand(entries, BLOCKS), BLOCKS);
     applying = true;
     try { window.trainer.replace(model.expand(baseline, BLOCKS)); }
@@ -96,6 +97,7 @@
     retry.classList.toggle('hide', !userId);
     account.textContent = session?.user?.email || '';
     if (!userId) {
+      window.ExamBadges?.update({}, null);
       applying = true;
       window.trainer.replace({});
       applying = false;
