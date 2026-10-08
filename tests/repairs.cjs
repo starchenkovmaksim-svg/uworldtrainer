@@ -1,7 +1,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
 const root=path.join(__dirname,'..'),elements=new Map(),storage=new Map();
 const el=id=>{if(!elements.has(id)){const classes=new Set(['quiz','summary','explain','selfGrade'].includes(id)?['hide']:[]);elements.set(id,{children:[],open:false,disabled:false,textContent:'',classList:{add:x=>classes.add(x),remove:x=>classes.delete(x),contains:x=>classes.has(x),toggle(x,on){on??=!classes.has(x);on?classes.add(x):classes.delete(x)}},append(...x){this.children.push(...x)},replaceChildren(...x){this.children=x},scrollIntoView(){},addEventListener(){},showModal(){this.open=true},close(){this.open=false},setAttribute(){},getBoundingClientRect(){return{left:0,right:100,top:0,bottom:100}},firstElementChild:{removeAttribute(){}}});}return elements.get(id)};
-const ctx=vm.createContext({window:{},document:{getElementById:el,createElement:()=>({classList:{add(){},remove(){}},scrollIntoView(){}}),addEventListener(){}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},scrollTo(){},confirm:()=>true,console});
+const ctx=vm.createContext({window:{},document:{getElementById:el,createElement:()=>({dataset:{},classList:{add(){},remove(){}},scrollIntoView(){}}),addEventListener(){}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},scrollTo(){},confirm:()=>true,console});
 const run=f=>vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
 run('data.js');run('question-repairs.js');run('progress.js');
 const blocks=vm.runInContext('BLOCKS',ctx),model=ctx.window.ProgressModel,repairs=ctx.window.QuestionRepairs;

@@ -11,6 +11,10 @@ const tick=()=>intervals.filter(([,ms])=>ms===1000).forEach(([fn])=>fn());
 (async()=>{
  vm.runInNewContext(fs.readFileSync(__dirname+'/../exam-app.js','utf8'),context);await new Promise(r=>setImmediate(r));
  assert.match(el('examContent').innerHTML,/Зачёты по темам/);
+ el('examTopicSearch').value='Neuro';el('examTopicSearch').oninput({target:el('examTopicSearch')});
+ const beforeSync=el('examContent').innerHTML;notify();assert.equal(el('examContent').innerHTML,beforeSync,'unchanged background sync should preserve focus and DOM');
+ click('catalog',{section:'mock'});assert.match(el('examContent').innerHTML,/value="Neuro"/,'search survives mode switching');
+ click('catalog',{section:'topics'});el('examTopicSearch').value='';el('examTopicSearch').oninput({target:el('examTopicSearch')});
  click('prepare',{mode:'topic',topic:bank.topics[0].id});assert.ok(el('setupDialog').open);assert.match(el('setupBody').innerHTML,/гостевом режиме/);
  el('startExam').onclick();assert.equal(records.size,1);let a=[...records.values()][0];assert.equal(a.mode,'topic');assert.match(el('examContent').innerHTML,/Осталось в блоке/);assert.ok(!el('examContent').innerHTML.includes('Объяснение</h3>'));
  click('answer',{letter:a.questions[0].correct});click('flag');a=records.get(a.id);assert.equal(a.answers[0],a.questions[0].correct);assert.equal(a.flags[0],true);
