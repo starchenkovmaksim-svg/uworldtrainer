@@ -1,0 +1,20 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const els=new Map(),listeners={};let copied='',fail=false;
+const el=id=>{if(!els.has(id))els.set(id,{value:'',hidden:false,textContent:'',setAttribute(){},showModal(){this.open=true},close(){this.open=false},focus(){},select(){}});return els.get(id)};
+const dialog=el('reportDialog'),win={};
+const ctx={window:win,document:{createElement:()=>dialog,body:{append(){}},getElementById:el,addEventListener:(n,fn)=>listeners[n]=fn},location:{origin:'https://trainer.example',pathname:'/topics.html',hash:'#private-token'},URLSearchParams,navigator:{clipboard:{writeText:async text=>{if(fail)throw Error('denied');copied=text}}}};
+vm.runInNewContext(fs.readFileSync(__dirname+'/../question-reports.js','utf8'),ctx);
+const open=c=>listeners.click({target:{closest:()=>({dataset:{reportQuestion:JSON.stringify(c)}})}});
+(async()=>{
+ const q={id:'topic-x:7',source:'Neurology · вопрос 8',section:'Темы',image:'q008.webp',timed:false};open(q);
+ assert.equal(dialog.open,true);assert.equal(el('reportTimer').hidden,true);
+ el('reportComment').value='Ключ <B> & объяснение "C"';el('reportComment').oninput();
+ const url=new URL(el('reportGithub').href),body=url.searchParams.get('body');
+ assert.equal(url.hostname,'github.com');assert.ok(body.includes('\nID: topic-x:7\n'));assert.ok(body.includes(el('reportComment').value));assert.ok(!body.includes('private-token'));
+ await el('reportCopy').onclick();assert.equal(copied,body);
+ el('reportClose').onclick();open({...q,id:'other',source:'Other',timed:true});assert.equal(el('reportComment').value,'');assert.equal(el('reportTimer').hidden,false);
+ open(q);assert.equal(el('reportComment').value,'Ключ <B> & объяснение "C"');
+ fail=true;await el('reportCopy').onclick();assert.equal(el('reportFallback').hidden,false);assert.equal(el('reportFallback').value,body);
+ const markup=win.QuestionReports.button({...q,source:'<img onerror="alert(1)">'});assert.ok(!markup.includes('<img'));assert.ok(markup.includes('&quot;'));
+ console.log('PASS: question identity, real newlines, draft isolation, GitHub encoding, copy/fallback, timer warning and HTML escaping');
+})().catch(e=>{console.error(e);process.exitCode=1});

@@ -70,7 +70,7 @@
   function question(a,i,finished) {
     const snap=a.questions[i],q=byId.get(snap.id);
     if(!q)return '<p class="warning">Этот вопрос отсутствует в текущем банке. Сохранённый результат остаётся доступен.</p>';
-    return `${q.contextImages.length?`<details><summary>Контекст клинического случая</summary><div class="images">${q.contextImages.map(u=>image(u,'Контекст случая')).join('')}</div></details>`:''}<div class="images">${q.questionImages.map(u=>image(u,'Условие и варианты ответа')).join('')}</div>
+    return `${window.QuestionReports?.button({section:'Зачёты и экзамены',source:q.source+' · вопрос в попытке '+(i+1),id:snap.id,image:q.questionImages[0]||'',timed:!finished})||''}${q.contextImages.length?`<details><summary>Контекст клинического случая</summary><div class="images">${q.contextImages.map(u=>image(u,'Контекст случая')).join('')}</div></details>`:''}<div class="images">${q.questionImages.map(u=>image(u,'Условие и варианты ответа')).join('')}</div>
     <p class="small">Выберите букву варианта из условия.</p><div class="choices">${snap.choices.map(letter=>button(letter,'answer','choice'+(a.answers[i]===letter?' active':'')+(finished&&letter===snap.correct?' correct':''),`data-letter="${letter}" ${finished||!owner(a)?'disabled':''}`)).join('')}</div>
     ${finished?`<div class="notice ${a.answers[i]===snap.correct?'good':'bad'}">Ваш ответ: ${esc(a.answers[i]||'пропуск')} · правильный: ${snap.correct} · время: ${time(a.spent[i])}</div><div class="small">${esc(q.source)}</div><h3>Объяснение</h3><div class="images">${q.explanationImages.map(u=>image(u,'Объяснение ответа')).join('')||'<p>В исходнике нет объяснения.</p>'}</div>`:''}`;
   }
