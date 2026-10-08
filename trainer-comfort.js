@@ -20,7 +20,7 @@
     dock.onclick=e=>{const b=e.target.closest('[data-proxy]');if(b&&!b.disabled)$(b.dataset.proxy).click();};
     const observer=new MutationObserver(sync);for(const id of ['qTitle','mark','prev','next'])observer.observe($(id),{childList:true,subtree:true,attributes:true,attributeFilter:['disabled']});sync();
   }
-  document.addEventListener('click',e=>{const b=e.target.closest('#mark,[data-action="flag"]');if(!b||b.disabled)return;requestAnimationFrame(()=>{const current=b.id==='mark'?$('mark'):document.querySelector('.toolbar [data-action="flag"]');if(current){notify(current.textContent.startsWith('★')?'Добавлено в отмеченные':'Отметка снята');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)current.animate([{opacity:.5},{opacity:1}],{duration:180});}});});
+  document.addEventListener('click',e=>{const b=e.target.closest('#mark,[data-action="flag"]');if(!b||b.disabled)return;requestAnimationFrame(()=>{const current=b.id==='mark'?$('mark'):document.querySelector('.toolbar [data-action="flag"]');if(current){notify(current.textContent.startsWith('★')?'Добавлено в отмеченные':'Отметка снята');if(root.dataset.motion!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches)current.animate([{opacity:.5},{opacity:1}],{duration:180});}});});
   // Announce only confirmed cloud saves; never infer success from a button click.
   const status=$('syncStatus');let last=status?.textContent||'';
   if(status)new MutationObserver(()=>{const text=status.textContent;if(text===last)return;last=text;if(/сохранен[оы] в (аккаунте|облаке)|синхронизирован/i.test(text))notify('Прогресс сохранён в аккаунте');}).observe(status,{childList:true,subtree:true,characterData:true});
