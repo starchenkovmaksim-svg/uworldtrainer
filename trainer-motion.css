@@ -1,0 +1,35 @@
+/* Quiet interaction feedback; no delays in answering or exam clocks. */
+:root{--motion-fast:130ms;--motion-normal:210ms;--motion-ease:cubic-bezier(.2,.65,.3,1)}
+:is(.btn,.choice,.dot,.account-icon,.filter-btn,.exam-tab,.section-link){transition:background-color var(--motion-fast) ease,border-color var(--motion-fast) ease,color var(--motion-fast) ease,box-shadow var(--motion-normal) ease,transform var(--motion-fast) var(--motion-ease)}
+:is(.catalog-card,.block.catalog-card,.topic-entry){transition:transform var(--motion-normal) var(--motion-ease),border-color var(--motion-normal) ease,box-shadow var(--motion-normal) ease}
+:is(.topic-open,.catalog-open)>span{transition:transform var(--motion-normal) var(--motion-ease)}
+:is(input,select){transition:border-color var(--motion-fast) ease,box-shadow var(--motion-fast) ease}
+:is(input,select):focus{border-color:var(--accent);box-shadow:0 0 0 3px #176fa10d}
+/* Hover is limited to precise pointers so touch screens never retain a lift. */
+@media(hover:hover) and (pointer:fine){
+  :is(.topic-entry,.catalog-card):hover{transform:translateY(-2px);box-shadow:0 7px 19px #1c355014}
+  :is(.topic-entry,.catalog-card):hover :is(.topic-open,.catalog-open)>span{transform:translate(2px,-1px)}
+  :is(.btn,.account-icon):not(:disabled):hover{box-shadow:0 3px 9px #1c355014}
+  .choice:not(:disabled):not(.active):hover,.dot:not(:disabled):hover{background:#eef5fa;border-color:var(--accent)}
+}
+:is(.btn,.account-icon,.filter-btn,.exam-tab,.choice,.dot):not(:disabled):active{transform:translateY(1px)}
+.block.catalog-card:not(:disabled):active{transform:translateY(0);box-shadow:0 2px 5px #1c355010}
+.topic-entry .block:not(:disabled):active .topic-open{background:#dfeef7}
+/* Focus feedback remains stationary and immediately visible. */
+:is(.catalog-card,.topic-entry):focus-within{border-color:#88a5bf}
+.account-dialog[open],.image-dialog[open]{animation:trainer-dialog-in 190ms var(--motion-ease)}
+dialog[open]::backdrop{animation:trainer-fade-in 170ms ease}
+.lightbox.open{animation:trainer-fade-in 170ms ease}
+#explain:not(.hide),details[open]>:not(summary){animation:trainer-reveal 210ms var(--motion-ease)}
+/* Only static mode panels animate; timed exam questions and clocks stay still. */
+.exam-section:not([hidden]):not(.hide){animation:trainer-reveal 170ms var(--motion-ease)}
+@keyframes trainer-dialog-in{from{opacity:.65;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes trainer-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes trainer-reveal{from{opacity:.7;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+/* Respect the OS preference for all added motion. */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  :is(.topic-entry,.catalog-card,.btn,.account-icon,.filter-btn,.exam-tab,.choice,.dot):is(:hover,:active){transform:none!important}
+  :is(.topic-open,.catalog-open)>span{transform:none!important}
+}
+
