@@ -60,3 +60,7 @@ html[data-theme=dark] .dots .dot.pending{background:#544424;border-color:#c6a65c
 html[data-theme=dark] .dots .dot.answered:not(.good):not(.bad){background:#244a65;border-color:#6aa6cc;color:#ddf2ff}
 
 .report-trigger,#quiz .report-trigger{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-height:40px;padding:10px 12px;line-height:1.3;text-align:center;white-space:normal;box-sizing:border-box}
+
+.btn.report-trigger,#quiz .btn.report-trigger{background:#eaf2f9;color:#254d6b;border:1px solid #9eb4c8;font-weight:600}
+html[data-theme=dark] .btn.report-trigger,html[data-theme=dark] #quiz .btn.report-trigger{background:#293e4d;color:#d9edf9;border-color:#658298}
+@media(hover:hover){.btn.report-trigger:hover,#quiz .btn.report-trigger:hover{background:#dae9f5;border-color:#6d94b3}html[data-theme=dark] .btn.report-trigger:hover,html[data-theme=dark] #quiz .btn.report-trigger:hover{background:#365366;border-color:#89aec7}}
