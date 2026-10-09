@@ -58,3 +58,5 @@ html[data-theme=dark] .dots .dot.good{background:#204d37;border-color:#64bd89;co
 html[data-theme=dark] .dots .dot.bad{background:#572d38;border-color:#d58191;color:#ffe1e7}
 html[data-theme=dark] .dots .dot.pending{background:#544424;border-color:#c6a65c;color:#ffebbb}
 html[data-theme=dark] .dots .dot.answered:not(.good):not(.bad){background:#244a65;border-color:#6aa6cc;color:#ddf2ff}
+
+.report-trigger,#quiz .report-trigger{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-height:40px;padding:10px 12px;line-height:1.3;text-align:center;white-space:normal;box-sizing:border-box}
