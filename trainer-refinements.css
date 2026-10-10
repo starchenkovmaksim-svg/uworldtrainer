@@ -1,0 +1,21 @@
+/* Shorter covers and tighter spacing, without shrinking touch targets. */
+.catalog-cover,.topic-cover,.catalog-card .topic-cover{height:110px}
+.catalog-card .topic-cover svg,.topic-cover svg{max-height:90px}
+.cover-number{font-size:60px}.mode .catalog-cover{height:125px}
+.topic-entry .topic-details,.catalog-details{padding:12px 14px;gap:7px}
+.topic-details strong,.topic-card .topic-name{min-height:44px;line-height:1.35}
+.topic-details .small{min-height:30px}
+.topic-open,.catalog-open{margin-top:7px;padding:7px 9px}
+.topic-entry>a.btn{margin:0 14px 10px}.mode .catalog-details{padding:16px;gap:8px}
+.mode .catalog-details p{margin:4px 0;line-height:1.5}
+.mistake-launch{margin:0 0 16px;min-height:44px}
+.mistake-dialog{width:min(960px,calc(100vw - 24px));max-width:960px;max-height:90dvh;padding:24px;overflow:auto;color:var(--ink)}
+.mistake-heading{display:flex;gap:12px;justify-content:space-between;align-items:center}.mistake-heading h2{margin:0;font-size:22px}
+.mistake-settings{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0}.mistake-settings label{display:grid;gap:6px;flex:1;min-width:180px;font-size:14px}
+.mistake-settings select{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.mistake-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.mistake-dialog .images a{display:block}.mistake-dialog .source{max-width:100%;height:auto}
+.question-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 0;font-size:12px;color:var(--muted)}
+.question-legend span{display:flex;align-items:center;gap:5px}.question-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--line)}
+.question-legend .legend-good{background:#278456}.question-legend .legend-bad{background:#bb455b}.question-legend .legend-pending{background:#c28a21}
+[data-theme=dark] .question-legend .legend-good{background:#7cdda3}[data-theme=dark] .question-legend .legend-bad{background:#f19baa}
+@media(max-width:700px){.catalog-cover,.topic-cover,.catalog-card .topic-cover{height:100px}.mode .catalog-cover{height:110px}.topic-details strong,.topic-card .topic-name,.topic-details .small{min-height:0}.mistake-dialog{padding:16px}.mistake-heading h2{font-size:19px}.mistake-heading .btn{padding:9px}.mistake-dialog .row{flex-wrap:wrap}.mistake-nav .btn{min-height:44px}}
