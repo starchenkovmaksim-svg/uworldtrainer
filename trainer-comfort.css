@@ -64,3 +64,12 @@ html[data-theme=dark] .dots .dot.answered:not(.good):not(.bad){background:#244a6
 .btn.report-trigger,#quiz .btn.report-trigger{background:#eaf2f9;color:#254d6b;border:1px solid #9eb4c8;font-weight:600}
 html[data-theme=dark] .btn.report-trigger,html[data-theme=dark] #quiz .btn.report-trigger{background:#293e4d;color:#d9edf9;border-color:#658298}
 @media(hover:hover){.btn.report-trigger:hover,#quiz .btn.report-trigger:hover{background:#dae9f5;border-color:#6d94b3}html[data-theme=dark] .btn.report-trigger:hover,html[data-theme=dark] #quiz .btn.report-trigger:hover{background:#365366;border-color:#89aec7}}
+
+/* Light results stay readable even when answer buttons become disabled. */
+html:not([data-theme=dark]) .choices .choice.active{background:#cce8fa;border:2px solid #2479ad;color:#103e5c;box-shadow:inset 0 0 0 1px #2479ad}
+html:not([data-theme=dark]) .choices .choice.correct{background:#c9ecd7;border:2px solid #278456;color:#124c2d;box-shadow:none;opacity:1}
+html:not([data-theme=dark]) .choices .choice.wrong{background:#f8d4d9;border:2px solid #bb455b;color:#782336;box-shadow:none;opacity:1}
+html:not([data-theme=dark]) .dots .dot.good{background:#c9ecd7;border-color:#278456;color:#124c2d}
+html:not([data-theme=dark]) .dots .dot.bad{background:#f8d4d9;border-color:#bb455b;color:#782336}
+html:not([data-theme=dark]) .dots .dot.pending{background:#f7e5b4;border-color:#a8791c;color:#634609}
+html:not([data-theme=dark]) .dots .dot.answered:not(.good):not(.bad){background:#cce8fa;border-color:#2479ad;color:#103e5c}
