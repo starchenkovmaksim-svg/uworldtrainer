@@ -81,7 +81,9 @@
     },context
   };
   goal.querySelector('button').onclick=()=>{document.getElementById('accountOpen').click();document.querySelector('[data-account-tab="settings"]').click();input.focus();};
-  input.onchange=()=>{const n=Number(input.value);if(!input.checkValidity()||!Number.isInteger(n)||n<1||n>280){input.reportValidity();return;}try{D.target(localStorage,owner(),n);storageError=false;updateGoal();}catch(_){storageError=true;note.textContent='Не удалось сохранить цель.';}};
+  const saveGoal=document.createElement('button');saveGoal.type='button';saveGoal.className='btn outline';saveGoal.textContent='Сохранить цель';goalRow.append(saveGoal);
+  saveGoal.onclick=()=>{const n=Number(input.value);if(!input.checkValidity()||!Number.isInteger(n)||n<1||n>280){input.reportValidity();return;}try{D.target(localStorage,owner(),n);storageError=false;updateGoal();saveGoal.textContent='Цель сохранена';}catch(_){storageError=true;note.textContent='Не удалось сохранить цель.';}};
+  input.oninput=()=>{saveGoal.textContent='Сохранить цель';};
   window.addEventListener('storage',updateGoal);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateGoal();});
   const accountNode=document.getElementById('account');
