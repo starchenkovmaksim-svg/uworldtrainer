@@ -1,0 +1,666 @@
+{
+  "practiceQuestions": 5017,
+  "examQuestions": 4309,
+  "uniqueImagesChecked": 19081,
+  "decodedNotes": 0,
+  "updatedExamCopies": 9,
+  "fixes": [
+    {
+      "topic": "topic-endocrinology",
+      "question": 8,
+      "qid": "19233",
+      "reason": "Remove trailing pages belonging to another QID (orphaned source material).",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "topics-assets/endocrinology/q008_1.webp"
+        ],
+        "explanationImages": [
+          "topics-assets/endocrinology/e008_1.webp",
+          "topics-assets/endocrinology/e008_2.webp",
+          "topics-assets/endocrinology/e008_3.webp"
+        ],
+        "sourcePages": [
+          15
+        ],
+        "explanationPages": [
+          15,
+          16,
+          17
+        ],
+        "qid": "19233"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "topics-assets/endocrinology/q008_1.webp"
+        ],
+        "explanationImages": [
+          "topics-assets/endocrinology/e008_1.webp",
+          "topics-assets/endocrinology/e008_2.webp"
+        ],
+        "sourcePages": [
+          15
+        ],
+        "explanationPages": [
+          15,
+          16
+        ],
+        "qid": "19233"
+      }
+    },
+    {
+      "topic": "topic-pediatric-2",
+      "question": 28,
+      "qid": "15846",
+      "reason": "Remove trailing pages belonging to another QID (orphaned source material).",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "topics-assets/pediatric-2/q028_1.webp"
+        ],
+        "explanationImages": [
+          "topics-assets/pediatric-2/e028_1.webp",
+          "topics-assets/pediatric-2/e028_2.webp",
+          "topics-assets/pediatric-2/e028_3.webp",
+          "topics-assets/pediatric-2/e028_4.webp"
+        ],
+        "sourcePages": [
+          56
+        ],
+        "explanationPages": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "qid": "15846"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "topics-assets/pediatric-2/q028_1.webp"
+        ],
+        "explanationImages": [
+          "topics-assets/pediatric-2/e028_1.webp",
+          "topics-assets/pediatric-2/e028_2.webp"
+        ],
+        "sourcePages": [
+          56
+        ],
+        "explanationPages": [
+          56,
+          57
+        ],
+        "qid": "15846"
+      }
+    },
+    {
+      "topic": "topic-2024-biochemistry",
+      "question": 23,
+      "qid": "788",
+      "reason": "Remove nonexistent answer buttons introduced by OCR of interface/diagram labels; checked against source options.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q023-p0121.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0122.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0123.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0124.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0125.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0126.webp"
+        ],
+        "sourcePages": [
+          121
+        ],
+        "explanationPages": [
+          122,
+          123,
+          124,
+          125,
+          126
+        ],
+        "sourceQuestionId": "788"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q023-p0121.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0122.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0123.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0124.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0125.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0126.webp"
+        ],
+        "sourcePages": [
+          121
+        ],
+        "explanationPages": [
+          122,
+          123,
+          124,
+          125,
+          126
+        ],
+        "sourceQuestionId": "788"
+      }
+    },
+    {
+      "topic": "topic-2024-biochemistry",
+      "question": 28,
+      "qid": "1032",
+      "reason": "Remove nonexistent answer buttons introduced by OCR of interface/diagram labels; checked against source options.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q028-p0153.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0154.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0155.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0156.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0157.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0158.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0159.webp"
+        ],
+        "sourcePages": [
+          153
+        ],
+        "explanationPages": [
+          154,
+          155,
+          156,
+          157,
+          158,
+          159
+        ],
+        "sourceQuestionId": "1032"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q028-p0153.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0154.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0155.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0156.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0157.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0158.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0159.webp"
+        ],
+        "sourcePages": [
+          153
+        ],
+        "explanationPages": [
+          154,
+          155,
+          156,
+          157,
+          158,
+          159
+        ],
+        "sourceQuestionId": "1032"
+      }
+    },
+    {
+      "topic": "topic-2024-biochemistry",
+      "question": 33,
+      "qid": "996",
+      "reason": "Remove nonexistent answer buttons introduced by OCR of interface/diagram labels; checked against source options.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q033-p0181.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q033-p0182.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0183.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0184.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0185.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0186.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0187.webp"
+        ],
+        "sourcePages": [
+          181,
+          182
+        ],
+        "explanationPages": [
+          183,
+          184,
+          185,
+          186,
+          187
+        ],
+        "sourceQuestionId": "996"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q033-p0181.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q033-p0182.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0183.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0184.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0185.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0186.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0187.webp"
+        ],
+        "sourcePages": [
+          181,
+          182
+        ],
+        "explanationPages": [
+          183,
+          184,
+          185,
+          186,
+          187
+        ],
+        "sourceQuestionId": "996"
+      }
+    },
+    {
+      "topic": "topic-2024-biochemistry",
+      "question": 67,
+      "qid": "1036",
+      "reason": "Remove nonexistent answer buttons introduced by OCR of interface/diagram labels; checked against source options.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q067-p0367.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q067-p0368.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0369.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0370.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0371.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0372.webp"
+        ],
+        "sourcePages": [
+          367,
+          368
+        ],
+        "explanationPages": [
+          369,
+          370,
+          371,
+          372
+        ],
+        "sourceQuestionId": "1036"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q067-p0367.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q067-p0368.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0369.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0370.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0371.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0372.webp"
+        ],
+        "sourcePages": [
+          367,
+          368
+        ],
+        "explanationPages": [
+          369,
+          370,
+          371,
+          372
+        ],
+        "sourceQuestionId": "1036"
+      }
+    },
+    {
+      "topic": "topic-2024-biochemistry",
+      "question": 68,
+      "qid": "1599",
+      "reason": "Remove nonexistent answer buttons introduced by OCR of interface/diagram labels; checked against source options.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q068-p0373.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q068-p0374.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q068-p0375.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0376.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0377.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0378.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0379.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0380.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0381.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0382.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0383.webp"
+        ],
+        "sourcePages": [
+          373,
+          374,
+          375
+        ],
+        "explanationPages": [
+          376,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383
+        ],
+        "sourceQuestionId": "1599"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q068-p0373.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q068-p0374.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q068-p0375.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0376.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0377.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0378.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0379.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0380.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0381.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0382.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0383.webp"
+        ],
+        "sourcePages": [
+          373,
+          374,
+          375
+        ],
+        "explanationPages": [
+          376,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383
+        ],
+        "sourceQuestionId": "1599"
+      }
+    },
+    {
+      "topic": "topic-2024-cardiovascular-system",
+      "question": 377,
+      "qid": "1518",
+      "reason": "Restore option D shown on the second question page.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correct": "B",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/q377-p2293.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/q377-p2294.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/q377-p2295.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2296.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2297.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2298.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2299.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2300.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2301.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2302.webp"
+        ],
+        "sourcePages": [
+          2293,
+          2294,
+          2295
+        ],
+        "explanationPages": [
+          2296,
+          2297,
+          2298,
+          2299,
+          2300,
+          2301,
+          2302
+        ],
+        "sourceQuestionId": "1518"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": "B",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/q377-p2293.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/q377-p2294.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/q377-p2295.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2296.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2297.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2298.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2299.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2300.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2301.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/cardiovascular-system/p2302.webp"
+        ],
+        "sourcePages": [
+          2293,
+          2294,
+          2295
+        ],
+        "explanationPages": [
+          2296,
+          2297,
+          2298,
+          2299,
+          2300,
+          2301,
+          2302
+        ],
+        "sourceQuestionId": "1518"
+      }
+    },
+    {
+      "topic": "topic-2024-microbiology",
+      "question": 204,
+      "qid": "15152",
+      "reason": "Move ungraded option page 996 from explanation into question; restore E and visible graphs C–E.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q204-p0995.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0996.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0997.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0998.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0999.webp"
+        ],
+        "sourcePages": [
+          995
+        ],
+        "explanationPages": [
+          996,
+          997,
+          998,
+          999
+        ],
+        "sourceQuestionId": "15152"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q204-p0995.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0996.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0997.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0998.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0999.webp"
+        ],
+        "sourcePages": [
+          995,
+          996
+        ],
+        "explanationPages": [
+          997,
+          998,
+          999
+        ],
+        "sourceQuestionId": "15152"
+      }
+    }
+  ],
+  "noteEncodingFinding": "False positive caused by intermediate report decoding; original site strings are valid UTF-8."
+}
