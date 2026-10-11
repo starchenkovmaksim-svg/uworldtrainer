@@ -12,7 +12,7 @@
   const fingerprint=()=>JSON.stringify(S.history().map(a=>[a.id,a.phase,a.block,a.current,a.answers,a.flags,a.finishedAt]));
   const random=()=>crypto.getRandomValues(new Uint32Array(1))[0]/4294967296;
   const owner=a=>locked&&a.device===device;
-  const save=a=>S.put(a);
+  const save=a=>{S.put(a);window.Vanessa?.examSaved(a,byId);};
   const h=()=>S.history().sort((a,b)=>b.startedAt-a.startedAt);
   const active=()=>h().find(a=>a.phase!=='done'&&a.device===device);
   const button=(text,action,cls='btn outline',extra='')=>`<button class="${cls}" data-action="${action}" ${extra}>${text}</button>`;
@@ -87,10 +87,11 @@
     if(review>=0&&!ids.includes(review))review=ids[0]??-1;
     $('examContent').innerHTML=`<div class="card pad"><p class="small">${esc(a.title)} · ${date(a.finishedAt)}</p><h1>${r.passed?'PASS · учебная цель достигнута':'Есть над чем поработать'}</h1><div class="result-number">${r.percent}%</div><p>${r.correct} из ${r.total} верно · ${r.skipped} без ответа · цель: ${Math.ceil(r.total*.8)} верных</p><p class="small">Время в блоках: ${time(r.spent)} · в среднем ${Math.round(r.spent/r.total/1000)} сек/вопрос. Включает время в фоне.</p><p class="small">Это учебный результат по нашей базе. Он не является официальной оценкой USMLE или прогнозом сдачи.</p><div class="row">${button('К выбору режима','home','btn primary')}${button('Новая попытка','prepare','btn outline',`data-mode="${a.mode}" ${a.topic?`data-topic="${a.topic}"`:''}`)}</div><h2>Результат по системам</h2><div class="table-wrap"><table><thead><tr><th>Система</th><th>Верно</th><th>Результат</th></tr></thead><tbody>${Object.entries(r.systems).sort((a,b)=>a[1].correct/a[1].total-b[1].correct/b[1].total).map(([id,s])=>`<tr><td>${systemName(id)}</td><td>${s.correct}/${s.total}</td><td>${Math.round(s.correct/s.total*100)}%</td></tr>`).join('')}</tbody></table></div></div><section class="card pad section-title"><h2>Разбор вопросов</h2><div class="row review-controls">${[['all','Все'],['wrong','Ошибки и пропуски'],['flagged','Отмеченные']].map(([id,name])=>button(name,'filter',`btn ${filter===id?'primary':'outline'}`,`data-filter="${id}"`)).join('')}</div><div class="dots">${ids.map(i=>button(i+1,'review','dot'+(a.answers[i]===a.questions[i].correct?' good':' bad')+(i===review?' now':''),`data-index="${i}"`)).join('')}</div>${!ids.length?'<p>Таких вопросов нет.</p>':review<0?'<p class="small">Выберите номер, чтобы открыть условие и объяснение.</p>':`<div class="section-title"><h3>Вопрос ${review+1}</h3>${question(a,review,true)}</div>`}</section>`;
   }
+  window.getVanessaContext=()=>view?S.get(view)?.phase||'home':'home';
   function render() {
     const a=view?S.get(view):null;
     if(!a){view=null;home();}else if(a.phase==='done')results(a);else running(a);
-    clock();lastRenderSignature=fingerprint();
+    window.Vanessa?.context(a?.phase||'home');clock();lastRenderSignature=fingerprint();
   }
   function clock() {
     const a=view?S.get(view):null;if(!a||a.phase==='done'||!$('examClock'))return;

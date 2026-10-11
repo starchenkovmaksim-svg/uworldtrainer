@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict'),D=require('../vanessa-daily.js');
+const map=new Map(),s={get length(){return map.size;},key:i=>[...map.keys()][i],getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,v)};
+const today=new Date(2026,9,11,23,59),tomorrow=new Date(2026,9,12,0,1);
+assert.equal(D.day(today),'2026-10-11');
+assert.deepEqual(D.read(s,'guest',today),{day:'2026-10-11',target:20,count:0});
+D.record(s,'guest',['question1','question1','question2'],today);
+D.record(s,'guest',['question1'],today);
+assert.equal(D.read(s,'guest',today).count,2,'reopening/regrading cannot inflate the day');
+D.target(s,'guest',2);assert.equal(D.read(s,'guest',today).target,2);
+assert.equal(D.read(s,'user-A',today).count,0,'account must not inherit guest progress');
+D.record(s,'user-A',['question1'],today);
+assert.equal(D.read(s,'user-B',today).count,0);
+assert.equal(D.read(s,'guest',tomorrow).count,0,'local midnight starts a new day');
+assert.equal(D.read(s,'guest',tomorrow).target,2,'daily reset retains chosen target');
+D.record(s,'guest',['question1'],tomorrow);assert.equal(D.read(s,'guest',tomorrow).count,1);
+// Separate per-question keys preserve additions from different tabs.
+D.record(s,'guest',['tab-A'],tomorrow);D.record(s,'guest',['tab-B'],tomorrow);
+assert.equal(D.read(s,'guest',tomorrow).count,3);
+for(const bad of [0,-1,281,NaN,1.5])assert.equal(D.target(s,'guest',bad),false);
+assert.throws(()=>D.record({...s,setItem(){throw Error('quota');}},'guest',['unsaved'],today));
+assert.equal(D.read(s,'guest',today).count,2);
+console.log('PASS Vanessa daily: deduplication, local midnight, account isolation, target bounds, multi-tab additions and storage failure');

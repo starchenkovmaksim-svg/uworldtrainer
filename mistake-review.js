@@ -44,8 +44,8 @@
     if(owner!==root.trainer?.cloudUser){dialog.close();return;}
     if(b.hasAttribute('data-start')){const group=body.querySelector('#mistakeGroup').value,limit=body.querySelector('#mistakeLimit').value,pool=root.getMistakeQuestions().filter(x=>!group||String(x.block)===group);for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}attempt=session(limit==='all'?pool:pool.slice(0,Number(limit)));index=0;if(!pool.length){setup();return;}render();}
     else if(b.hasAttribute('data-answer')){attempt.choose(index,b.dataset.answer);render();return;}
-    else if(b.hasAttribute('data-check')){attempt.submit(index);render();return;}
-    else if(b.hasAttribute('data-grade')){attempt.grade(index,b.dataset.grade==='yes');render();return;}
+    else if(b.hasAttribute('data-check')){attempt.submit(index);render();root.Vanessa?.answered(attempt.items[index].q.questionImages[0],attempt.results[index].grade);return;}
+    else if(b.hasAttribute('data-grade')){attempt.grade(index,b.dataset.grade==='yes');render();root.Vanessa?.answered(attempt.items[index].q.questionImages[0],attempt.results[index].grade);return;}
     else if(b.hasAttribute('data-prev')){index--;render();}
     else if(b.hasAttribute('data-next')){if(index===attempt.items.length-1)finish();else {index++;render();}}
     else if(b.hasAttribute('data-again')){attempt=session(attempt.items.filter((_,i)=>attempt.results[i].grade===false));index=0;render();}
