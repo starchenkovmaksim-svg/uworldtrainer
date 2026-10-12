@@ -30,7 +30,7 @@
   const goal=document.createElement('div');goal.className='vanessa-goal';
   goal.innerHTML='<div class="vanessa-goal-heading"><strong class="vanessa-count"></strong><button class="btn outline vanessa-goal-edit" type="button">Цель</button></div><progress aria-label="Дневная цель" max="20" value="0"></progress><small class="vanessa-goal-note">На этом устройстве · все разделы</small>';
   helper.insertBefore(goal,helper.querySelector('.vanessa-tip'));
-  const goalRow=document.createElement('label');goalRow.className='setting-row';goalRow.htmlFor='vanessaTarget';
+  const goalRow=document.createElement('label');goalRow.className='setting-row vanessa-goal-setting';goalRow.htmlFor='vanessaTarget';
   goalRow.innerHTML='<span><strong>Цель Ванессы на день</strong><small>1–280 проверенных вопросов. По местному времени; каждый вопрос один раз в день. В экзамене — после закрытия блока. Счётчик на этом устройстве, отдельно для каждого аккаунта.</small></span><input id="vanessaTarget" type="number" required min="1" max="280" step="1" value="20">';
   settings?.append(goalRow);
   const input=goalRow.querySelector('input'),bar=goal.querySelector('progress'),count=goal.querySelector('.vanessa-count'),note=goal.querySelector('small');
