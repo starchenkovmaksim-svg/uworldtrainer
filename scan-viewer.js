@@ -4,11 +4,27 @@
   function bounds(img){const src=img.getAttribute('src');return margins[src]||margins[src?.replace(new URL('.',location.href).href,'')]||[img.naturalWidth,img.naturalHeight,img.naturalWidth];}
   function crop(frame,img,b,full){const w=full?b[0]:b[2];frame.style.aspectRatio=`${w}/${b[1]}`;img.style.width=`${b[0]/w*100}%`;return w;}
   const dialog=document.createElement('dialog');dialog.className='scan-viewer';dialog.setAttribute('aria-label','Просмотр страницы');
-  dialog.innerHTML='<div class="scan-toolbar"><strong>Просмотр страницы</strong><div class="scan-controls"><button type="button" data-less aria-label="Уменьшить">−</button><output aria-live="polite"></output><button type="button" data-more aria-label="Увеличить">+</button><button type="button" data-fit>По ширине</button><button type="button" data-full>Вся страница</button><button type="button" data-close>Закрыть</button></div></div><div class="scan-stage" tabindex="0" aria-label="Изображение: перемещайте мышью или пальцем"><div class="scan-frame"><img alt="Увеличенная страница задания" draggable="false"></div></div><p class="scan-help">Масштаб: + / − или два пальца. Перемещение: потяните страницу. Esc — закрыть.</p><p class="scan-error" role="status" hidden>Не удалось загрузить изображение. Закройте окно и попробуйте снова.</p>';
-  document.body.append(dialog);const stage=dialog.querySelector('.scan-stage'),frame=stage.firstElementChild,img=frame.firstElementChild,output=dialog.querySelector('output'),fullButton=dialog.querySelector('[data-full]');let b=null,full=false,pixels=0,origin=null,ready=false;
-  function refresh(){if(!ready)return;const w=crop(frame,img,b,full);frame.style.width=pixels+'px';output.textContent=Math.round(pixels/w*100)+'%';fullButton.hidden=b[2]===b[0];fullButton.textContent=full?'Без пустых полей':'Вся страница';}
-  function fit(){if(!ready)return;pixels=Math.min(stage.clientWidth-24,(full?b[0]:b[2])*1.25);refresh();stage.scrollTo(0,0);}
-  function zoom(factor){if(!ready)return;const old=pixels;pixels=Math.max(96,Math.min((full?b[0]:b[2])*5,pixels*factor));const ratio=pixels/old,x=(stage.scrollLeft+stage.clientWidth/2)*ratio-stage.clientWidth/2,y=(stage.scrollTop+stage.clientHeight/2)*ratio-stage.clientHeight/2;refresh();stage.scrollTo(x,y);}
+  dialog.innerHTML='<div class="scan-toolbar"><strong>Просмотр страницы</strong><div class="scan-controls"><button type="button" data-less aria-label="Уменьшить">−</button><output aria-live="polite"></output><button type="button" data-more aria-label="Увеличить">+</button><button type="button" data-fit>По ширине</button><button type="button" data-full>Вся страница</button><button type="button" data-close>Закрыть</button></div></div><div class="scan-stage" tabindex="0" aria-label="Изображение: перемещайте мышью или пальцем"><div class="scan-plane"><div class="scan-frame"><img alt="Увеличенная страница задания" draggable="false"></div></div></div><p class="scan-help">Масштаб: колёсико под курсором, + / − или два пальца. Перемещение: потяните страницу. Esc — закрыть.</p><p class="scan-error" role="status" hidden>Не удалось загрузить изображение. Закройте окно и попробуйте снова.</p>';
+  document.body.append(dialog);const stage=dialog.querySelector('.scan-stage'),plane=stage.firstElementChild,frame=plane.firstElementChild,img=frame.firstElementChild,output=dialog.querySelector('output'),fullButton=dialog.querySelector('[data-full]');let b=null,full=false,pixels=0,origin=null,ready=false;
+  function refresh(){if(!ready)return;const w=crop(frame,img,b,full);frame.style.width=pixels+'px';const height=pixels*b[1]/w;plane.style.width=Math.max(stage.clientWidth,pixels)*3+'px';plane.style.height=Math.max(stage.clientHeight,height)*3+'px';frame.style.left=(parseFloat(plane.style.width)-pixels)/2+'px';frame.style.top=(parseFloat(plane.style.height)-height)/2+'px';output.textContent=Math.round(pixels/w*100)+'%';fullButton.hidden=b[2]===b[0];fullButton.textContent=full?'Без пустых полей':'Вся страница';}
+  function fit(){if(!ready)return;pixels=Math.min(stage.clientWidth-24,(full?b[0]:b[2])*1.25);refresh();stage.scrollTo(0,0);const r=frame.getBoundingClientRect(),v=stage.getBoundingClientRect();stage.scrollBy(r.left-v.left-(stage.clientWidth-pixels)/2,r.top-v.top-12);}
+  function zoom(factor,clientX,clientY){
+    if(!ready)return;
+    const viewport=stage.getBoundingClientRect(),before=frame.getBoundingClientRect();
+    const x=clientX??viewport.left+stage.clientWidth/2,y=clientY??viewport.top+stage.clientHeight/2;
+    const u=(x-before.left)/pixels,v=(y-before.top)/pixels;
+    const next=Math.max(96,Math.min((full?b[0]:b[2])*5,pixels*factor));
+    if(next===pixels)return;
+    pixels=next;refresh();
+    const after=frame.getBoundingClientRect();
+    stage.scrollBy(after.left+u*pixels-x,after.top+v*pixels-y);
+  }
+  stage.addEventListener('wheel',e=>{
+    if(!ready||!e.deltaY)return;
+    e.preventDefault();
+    const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?stage.clientHeight:1);
+    zoom(Math.exp(-Math.max(-240,Math.min(240,delta))*.002),e.clientX,e.clientY);
+  },{passive:false});
   function open(source){origin=source;ready=false;b=bounds(source);full=false;dialog.querySelector('.scan-error').hidden=true;img.onload=()=>{if(!b[0])b=[img.naturalWidth,img.naturalHeight,img.naturalWidth];ready=true;fit();};img.onerror=()=>{dialog.querySelector('.scan-error').hidden=false;};img.src=source.src;dialog.showModal();if(img.complete&&img.naturalWidth)img.onload();}
   dialog.querySelector('[data-close]').onclick=()=>dialog.close();dialog.querySelector('[data-less]').onclick=()=>zoom(1/1.25);dialog.querySelector('[data-more]').onclick=()=>zoom(1.25);dialog.querySelector('[data-fit]').onclick=fit;fullButton.onclick=()=>{full=!full;fit();};
   dialog.addEventListener('close',()=>{ready=false;img.removeAttribute('src');origin?.focus({preventScroll:true});});
@@ -17,7 +33,7 @@
   const pointers=new Map();let lastDistance=0;
   stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointers.set(e.pointerId,[e.clientX,e.clientY]);stage.setPointerCapture(e.pointerId);lastDistance=pointers.size===2?distance():0;});
   function distance(){const [a,b]=[...pointers.values()];return Math.hypot(a[0]-b[0],a[1]-b[1]);}
-  stage.addEventListener('pointermove',e=>{const prev=pointers.get(e.pointerId);if(!prev)return;pointers.set(e.pointerId,[e.clientX,e.clientY]);if(pointers.size===2){const d=distance();if(lastDistance>0)zoom(d/lastDistance);lastDistance=d;}else if(pointers.size===1){stage.scrollLeft+=prev[0]-e.clientX;stage.scrollTop+=prev[1]-e.clientY;}});
+  stage.addEventListener('pointermove',e=>{const prev=pointers.get(e.pointerId);if(!prev)return;pointers.set(e.pointerId,[e.clientX,e.clientY]);if(pointers.size===2){const d=distance();if(lastDistance>0){const [a,b]=[...pointers.values()];zoom(d/lastDistance,(a[0]+b[0])/2,(a[1]+b[1])/2);}lastDistance=d;}else if(pointers.size===1){stage.scrollLeft+=prev[0]-e.clientX;stage.scrollTop+=prev[1]-e.clientY;}});
   for(const name of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(name,e=>{pointers.delete(e.pointerId);lastDistance=0;});
   dialog.addEventListener('close',()=>pointers.clear());window.addEventListener('resize',()=>{if(dialog.open)fit();});
   function enhance(){for(const source of document.querySelectorAll('img.source,img.exam-image')){
