@@ -4,7 +4,7 @@ const today=new Date(2026,9,11,23,59),tomorrow=new Date(2026,9,12,0,1);
 assert.equal(D.day(today),'2026-10-11');
 assert.deepEqual(D.read(s,'guest',today),{day:'2026-10-11',target:20,count:0});
 D.record(s,'guest',['question1','question1','question2'],today);
-D.record(s,'guest',['question1'],today);
+D.record({...s,get length(){return s.length;},setItem(){throw Error('duplicate write');}},'guest',['question1'],today);
 assert.equal(D.read(s,'guest',today).count,2,'reopening/regrading cannot inflate the day');
 D.target(s,'guest',2);assert.equal(D.read(s,'guest',today).target,2);
 assert.equal(D.read(s,'user-A',today).count,0,'account must not inherit guest progress');

@@ -12,7 +12,7 @@
   }
   function record(storage,owner,ids,date=new Date()){
     const start=scope(owner)+day(date)+':q:';
-    for(const id of new Set(ids.filter(id=>typeof id==='string'&&id)))storage.setItem(start+encodeURIComponent(id),'1');
+    for(const id of new Set(ids.filter(id=>typeof id==='string'&&id))){const key=start+encodeURIComponent(id);if(storage.getItem(key)!=='1')storage.setItem(key,'1');}
     return read(storage,owner,date);
   }
   function target(storage,owner,n){if(!valid(n))return false;storage.setItem(scope(owner)+'target',String(n));return true;}

@@ -17,8 +17,8 @@ function element(id='') {
  return e;
 }
 const get=id=>{if(!elements.has(id))elements.set(id,element(id));return elements.get(id)};
-const win={};
-const context=vm.createContext({window:win,document:{getElementById:get,createElement:()=>element(),addEventListener(){}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},scrollTo(){},confirm:()=>true,console});
+const win={},handlers={};
+const context=vm.createContext({window:win,document:{getElementById:get,createElement:()=>element(),addEventListener:(name,fn)=>handlers[name]=fn,querySelector:()=>null},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},scrollTo(){},confirm:()=>true,console});
 vm.runInContext(fs.readFileSync(path.join(root,'topics-data.js'),'utf8'),context);
 const original=vm.runInContext('JSON.stringify(BLOCKS)',context);
 vm.runInContext(fs.readFileSync(path.join(root,'topics-data-2024.js'),'utf8'),context);
@@ -41,6 +41,7 @@ assert.ok(!get('quiz').classList.contains('hide'));
 assert.ok(get('explain').classList.contains('hide'));
 assert.equal(get('explainImages').children.length,0);
 assert.ok(get('submit').disabled);
+for(const modifier of ['ctrlKey','metaKey','altKey']){handlers.keydown({key:'a',[modifier]:true,target:{tagName:'BODY'}});assert.ok(get('submit').disabled,modifier+' shortcuts must not select an answer');}
 get('choices').children.find(e=>e.textContent===blocks[0].questions[0].correct).click();
 assert.ok(!get('submit').disabled);get('submit').click();
 assert.ok(!get('explain').classList.contains('hide'));

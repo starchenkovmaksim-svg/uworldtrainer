@@ -7,7 +7,7 @@
   $('accountOpen').before(theme);refreshTheme();
   const toast=document.createElement('div');toast.className='action-toast';toast.setAttribute('role','status');toast.hidden=true;document.body.append(toast);let timer;
   function notify(text){clearTimeout(timer);toast.textContent=text;toast.hidden=false;timer=setTimeout(()=>toast.hidden=true,2200);}
-  window.TrainerFeedback={notify};
+  window.TrainerFeedback={notify,scrollBehavior:()=>root.dataset.motion==='off'||matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'};
   if($('quiz')){
     const dock=document.createElement('div');dock.className='question-dock';dock.setAttribute('aria-label','Быстрая навигация по вопросу');
     dock.innerHTML='<span class="dock-title"></span><div class="dock-actions"><button class="btn outline dock-mark" type="button" data-proxy="mark">☆ Отметить</button></div>';

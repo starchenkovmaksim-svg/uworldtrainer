@@ -23,19 +23,21 @@
   const tips=['Прежде чем смотреть варианты, попробуй сформулировать свой ответ.','После разбора объясни себе, почему остальные варианты не подходят.','Сложный вопрос можно отметить звёздочкой и вернуться к нему позже.','В разделе «Работа над ошибками» можно повторить неверные ответы.','Таблицы и схемы можно увеличить нажатием на изображение.'];
   let tip=0;
   helper.querySelector('.vanessa-tip').onclick=()=>{message.textContent=tips[tip++%tips.length];react();};
-  function react(){if(root.dataset.motion!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches)pet.animate([{transform:'rotate(0)'},{transform:'rotate(-5deg) translateY(-3px)'},{transform:'rotate(3deg)'},{transform:'rotate(0)'}],{duration:550,easing:'ease-in-out'});}
+  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+  function stopMotion(){for(const a of pet.getAnimations())a.cancel();}
+  function react(){stopMotion();if(!helper.hidden&&root.dataset.motion!=='off'&&!reducedMotion.matches)pet.animate([{transform:'rotate(0)'},{transform:'rotate(-5deg) translateY(-3px)'},{transform:'rotate(3deg)'},{transform:'rotate(0)'}],{duration:550,easing:'ease-in-out'});}
   pet.onclick=()=>{message.textContent='Спасибо за ласку. Я рядом — продолжим в твоём темпе.';react();};
   /* Reactions are driven by confirmed learning actions, never by reopening answers. */
   const D=window.VanessaDaily,photo=pet.querySelector('img');
   const goal=document.createElement('div');goal.className='vanessa-goal';
   goal.innerHTML='<div class="vanessa-goal-heading"><strong class="vanessa-count"></strong><button class="btn outline vanessa-goal-edit" type="button">Цель</button></div><progress aria-label="Дневная цель" max="20" value="0"></progress><small class="vanessa-goal-note">На этом устройстве · все разделы</small>';
   helper.insertBefore(goal,helper.querySelector('.vanessa-tip'));
-  const goalRow=document.createElement('label');goalRow.className='setting-row vanessa-goal-setting';goalRow.htmlFor='vanessaTarget';
-  goalRow.innerHTML='<span><strong>Цель Ванессы на день</strong><small>1–280 проверенных вопросов. По местному времени; каждый вопрос один раз в день. В экзамене — после закрытия блока. Счётчик на этом устройстве, отдельно для каждого аккаунта.</small></span><input id="vanessaTarget" type="number" required min="1" max="280" step="1" value="20">';
+  const goalRow=document.createElement('div');goalRow.className='setting-row vanessa-goal-setting';
+  goalRow.innerHTML='<label for="vanessaTarget"><strong>Цель Ванессы на день</strong><small>1–280 проверенных вопросов. По местному времени; каждый вопрос один раз в день. В экзамене — после закрытия блока. Счётчик на этом устройстве, отдельно для каждого аккаунта.</small></label><input id="vanessaTarget" type="number" required min="1" max="280" step="1" value="20">';
   settings?.append(goalRow);
   const input=goalRow.querySelector('input'),bar=goal.querySelector('progress'),count=goal.querySelector('.vanessa-count'),note=goal.querySelector('small');
   const owner=()=>window.trainer?.cloudUser||window.ExamStore?.user||'guest';
-  let celebrationTimer,animation,currentContext='',identity='',lastDay='',storageError=false;
+  let celebrationTimer,animation,currentContext='',identity='',lastDay='',storageError=false,goalDirty=false;
   const poses={attentive:['vanessa.png','Ванесса внимательно слушает'],happy:['happy.png','Ванесса радуется и поднимает лапку'],rest:['rest.png','Ванесса отдыхает, положив голову на лапы']};
   function pose(name){const [src,alt]=poses[name];if(photo.getAttribute('src')!=='assets/vanessa/'+src)photo.src='assets/vanessa/'+src;photo.alt=alt;helper.dataset.pose=name;}
   function context(name=window.getVanessaContext?.()||'home'){
@@ -49,17 +51,17 @@
   function celebrate(){
     if(helper.hidden||currentContext==='block'||currentContext==='tutorial')return;
     pose('happy');message.textContent='Цель на сегодня выполнена! Дай лапу — ты хорошо поработал.';
-    animation?.cancel();
+    stopMotion();
     if(root.dataset.motion!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches)animation=pet.animate([{transform:'translateY(0)'},{transform:'translateY(-7px) rotate(-4deg)'},{transform:'translateY(0)'},{transform:'translateY(-3px)'},{transform:'translateY(0)'}],{duration:850,easing:'ease-out'});
     clearTimeout(celebrationTimer);celebrationTimer=setTimeout(()=>pose(currentContext==='break'?'rest':currentContext==='done'?'happy':'attentive'),4000);
   }
   function updateGoal(){
     try{
       const user=owner(),d=D.read(localStorage,user);
-      if(identity!==user||lastDay!==d.day){identity=user;lastDay=d.day;clearTimeout(celebrationTimer);animation?.cancel();currentContext='';context();}
+      if(identity!==user||lastDay!==d.day){identity=user;lastDay=d.day;goalDirty=false;saveGoal.textContent='Сохранить цель';clearTimeout(celebrationTimer);animation?.cancel();currentContext='';context();}
       count.textContent=d.count>=d.target?`✓ ${d.count} / ${d.target} · цель выполнена`:`Сегодня ${d.count} / ${d.target}`;
       bar.max=d.target;bar.value=Math.min(d.count,d.target);bar.setAttribute('aria-valuetext',`${d.count} из ${d.target} вопросов`);
-      if(document.activeElement!==input)input.value=d.target;
+      if(!goalDirty&&document.activeElement!==input)input.value=d.target;
       if(!storageError)note.textContent='На этом устройстве · все разделы';
       return d;
     }catch(_){note.textContent='Счётчик недоступен: браузер не разрешает сохранение.';return null;}
@@ -82,15 +84,16 @@
   };
   goal.querySelector('button').onclick=()=>{document.getElementById('accountOpen').click();document.querySelector('[data-account-tab="settings"]').click();input.focus();};
   const saveGoal=document.createElement('button');saveGoal.type='button';saveGoal.className='btn outline';saveGoal.textContent='Сохранить цель';goalRow.append(saveGoal);
-  saveGoal.onclick=()=>{const n=Number(input.value);if(!input.checkValidity()||!Number.isInteger(n)||n<1||n>280){input.reportValidity();return;}try{D.target(localStorage,owner(),n);storageError=false;updateGoal();saveGoal.textContent='Цель сохранена';}catch(_){storageError=true;note.textContent='Не удалось сохранить цель.';}};
-  input.oninput=()=>{saveGoal.textContent='Сохранить цель';};
+  saveGoal.onclick=()=>{const n=Number(input.value);if(!input.checkValidity()||!Number.isInteger(n)||n<1||n>280){input.reportValidity();return;}try{D.target(localStorage,owner(),n);storageError=false;goalDirty=false;updateGoal();saveGoal.textContent='Цель сохранена';}catch(_){storageError=true;note.textContent='Не удалось сохранить цель.';}};
+  input.oninput=()=>{goalDirty=true;saveGoal.textContent='Сохранить цель';};
   window.addEventListener('storage',updateGoal);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateGoal();});
   const accountNode=document.getElementById('account');
   if(accountNode)new MutationObserver(updateGoal).observe(accountNode,{childList:true,subtree:true,characterData:true});
   setInterval(()=>{if(!document.hidden)updateGoal();},30000);
-  new MutationObserver(()=>{if(root.dataset.motion==='off')for(const a of pet.getAnimations())a.cancel();}).observe(root,{attributes:true,attributeFilter:['data-motion']});
-  const result=document.getElementById('result');
-  if(result)new MutationObserver(()=>{if(!result.children.length){clearTimeout(celebrationTimer);pose('attentive');}}).observe(result,{childList:true});
+  new MutationObserver(()=>{if(root.dataset.motion==='off'||root.dataset.skin!=='vanessa')stopMotion();}).observe(root,{attributes:true,attributeFilter:['data-motion','data-skin']});
+  reducedMotion.addEventListener?.('change',e=>{if(e.matches)stopMotion();});
+  const questionTitle=document.getElementById('qTitle');let lastQuestion=questionTitle?.textContent;
+  if(questionTitle)new MutationObserver(()=>{if(questionTitle.textContent!==lastQuestion){lastQuestion=questionTitle.textContent;clearTimeout(celebrationTimer);stopMotion();pose('attentive');message.textContent='Не спеши. Внимательно прочитай условие.';}}).observe(questionTitle,{childList:true,subtree:true,characterData:true});
   refresh();updateGoal();context();
 })();
