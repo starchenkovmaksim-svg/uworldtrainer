@@ -3,7 +3,7 @@ const core=require('../exam-core.js'),ctxBank={window:{}};vm.runInNewContext(fs.
 const bank=ctxBank.window.ExamBank,els=new Map(),local=new Map(),records=new Map(),intervals=[];let notify=()=>{},user=null,now=1000000,serial=0;
 function el(id){if(!els.has(id))els.set(id,{innerHTML:'',textContent:'',dataset:{},value:'',children:[],classList:{toggle(){},add(){},remove(){}},showModal(){this.open=true;},close(){this.open=false;},scrollIntoView(){}});return els.get(id);}
 const store={get user(){return user;},ready:true,storageOK:true,seen:new Set(),setWriter(){},history:()=>[...records.values()],get:id=>records.get(id),put:a=>records.set(a.id,structuredClone(a)),subscribe:fn=>notify=fn};
-const win={ExamCore:core,ExamBank:bank,ExamStore:store,addEventListener(){}};
+const win={MedicalNotes:{html:()=>"MEDICAL_NOTE_TEST"},ExamCore:core,ExamBank:bank,ExamStore:store,addEventListener(){}};
 class Clock extends Date{static now(){return now;}}
 const context={window:win,document:{getElementById:el,querySelector:()=>null,addEventListener(){}},navigator:{locks:{request:(_name,_options,fn)=>Promise.resolve().then(()=>fn({}))}},localStorage:{getItem:k=>local.get(k),setItem:(k,v)=>local.set(k,v)},crypto:{randomUUID:()=>`test-${++serial}`,getRandomValues:a=>{a[0]=Math.floor(Math.random()*4294967296);return a;}},Date:Clock,URLSearchParams,location:{search:''},setInterval:(fn,ms)=>intervals.push([fn,ms]),clearInterval(){},scrollTo(){},alert:message=>{throw Error(message);}};
 const click=(action,extra={})=>el('examContent').onclick({target:{closest:selector=>selector==='[data-zoom]'?null:{dataset:{action,...extra},disabled:false}}});
@@ -16,12 +16,12 @@ const tick=()=>intervals.filter(([,ms])=>ms===1000).forEach(([fn])=>fn());
  click('catalog',{section:'mock'});assert.match(el('examContent').innerHTML,/value="Neuro"/,'search survives mode switching');
  click('catalog',{section:'topics'});el('examTopicSearch').value='';el('examTopicSearch').oninput({target:el('examTopicSearch')});
  click('prepare',{mode:'topic',topic:bank.topics[0].id});assert.ok(el('setupDialog').open);assert.match(el('setupBody').innerHTML,/гостевом режиме/);
- el('startExam').onclick();assert.equal(records.size,1);let a=[...records.values()][0];assert.equal(a.mode,'topic');assert.match(el('examContent').innerHTML,/Осталось в блоке/);assert.ok(!el('examContent').innerHTML.includes('Объяснение</h3>'));
+ el('startExam').onclick();assert.equal(records.size,1);let a=[...records.values()][0];assert.equal(a.mode,'topic');assert.match(el('examContent').innerHTML,/Осталось в блоке/);assert.ok(!el('examContent').innerHTML.includes('Объяснение</h3>'));assert.ok(!el('examContent').innerHTML.includes('MEDICAL_NOTE_TEST'));
  click('answer',{letter:a.questions[0].correct});click('flag');a=records.get(a.id);assert.equal(a.answers[0],a.questions[0].correct);assert.equal(a.flags[0],true);
  click('navigate',{index:'1'});assert.equal(records.get(a.id).current,1);
  const wrong=a.questions[1].choices.find(x=>x!==a.questions[1].correct);click('answer',{letter:wrong});assert.ok(!el('examContent').innerHTML.includes('choice active wrong'),'do not disclose grading during a live exam');
  click('askEnd');assert.ok(el('endDialog').open);now+=60000;el('confirmEnd').onclick();assert.equal(records.get(a.id).phase,'done');assert.match(el('examContent').innerHTML,/Результат по системам/);
- click('review',{index:'0'});assert.match(el('examContent').innerHTML,/правильный:/);assert.match(el('examContent').innerHTML,/Объяснение/);
+ click('review',{index:'0'});assert.match(el('examContent').innerHTML,/правильный:/);assert.match(el('examContent').innerHTML,/MEDICAL_NOTE_TEST/);assert.match(el('examContent').innerHTML,/Объяснение/);
  click('review',{index:'1'});assert.match(el('examContent').innerHTML,/class="choice active wrong"/,'wrong selection must be marked in final review');assert.match(el('examContent').innerHTML,/class="choice correct"/);
  click('home');click('prepare',{mode:'full'});el('startExam').onclick();a=[...records.values()].at(-1);assert.equal(a.phase,'tutorial');assert.match(el('examContent').innerHTML,/Инструктаж/);
  click('nextBlock');assert.equal(records.get(a.id).breakMs,60*60000);click('askEnd');el('confirmEnd').onclick();assert.equal(records.get(a.id).phase,'break');assert.match(el('examContent').innerHTML,/Перерыв/);

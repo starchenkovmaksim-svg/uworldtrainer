@@ -1,0 +1,227 @@
+[
+  {
+    "id": "topic-2024-general-pharmacology:4",
+    "question": 5,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q005-p0022.webp",
+    "sourceQuestionId": "11761",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Связывание с белками и объём распределения",
+    "text": "В комментарии к варианту E направление эффекта указано неверно. При прочих равных снижение связывания с белками плазмы увеличивает свободную фракцию и обычно увеличивает, а не уменьшает объём распределения. Итог зависит также от связывания в тканях и клиренса. Это не меняет ответ B: основной механизм взаимодействия здесь — подавление кишечного CYP3A.",
+    "sources": [
+      {
+        "label": "NCBI: объём распределения",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK545280/"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:9",
+    "question": 10,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q010-p0052.webp",
+    "sourceQuestionId": "161",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Соединение висмута",
+    "text": "В комментарии к варианту B следует читать «сульфид висмута» (bismuth sulfide), а не «сульфат» (sulfate). Именно образование сульфида связано с потемнением стула. Ответ D о взаимодействии кларитромицина и симвастатина сохраняется.",
+    "sources": [
+      {
+        "label": "Pepto-Bismol: образование сульфида",
+        "url": "https://pepto-bismol.com/en-us/faq/black-stool-black-tongue"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:10",
+    "question": 11,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q011-p0056.webp",
+    "sourceQuestionId": "1707",
+    "date": "2026-10-15",
+    "kind": "ambiguity",
+    "title": "Potency не равна affinity",
+    "text": "Кривые показывают более высокую potency препарата 2 по сравнению с 3. По одной кривой «концентрация–эффект» нельзя однозначно определить сродство к рецептору: EC50 не равна константе связывания Kd и зависит также от эффективности передачи сигнала и рецепторного резерва. B сохранён как ключ исходника, но формулировка о доказанной более высокой affinity требует дополнительных допущений.",
+    "sources": [
+      {
+        "label": "GraphPad: EC50 и Kd",
+        "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_the_ec50.htm"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:12",
+    "question": 13,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q013-p0064.webp",
+    "sourceQuestionId": "18421",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Доставка фермента при болезни Гоше",
+    "text": "Для имиглюцеразы доставка в макрофаги основана на распознавании концевых остатков маннозы. Объяснение через маннозо-6-фосфатный рецептор нельзя переносить на этот препарат. Ответ A остаётся верным: белковый фермент вводится внутривенно и поступает в клетки посредством эндоцитоза.",
+    "sources": [
+      {
+        "label": "Cerezyme: механизм действия",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=df60f030-866b-4374-a31f-8ae3f6b45c38"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:13",
+    "question": 14,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q014-p0069.webp",
+    "sourceQuestionId": "14919",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Нефротоксичность бисфосфонатов",
+    "text": "Фраза об отсутствии существенной нефротоксичности слишком широка для всего класса. В частности, внутривенная золедроновая кислота может вызывать острое повреждение почек; для Reclast предусмотрены ограничения при нарушении функции почек. В этом задании связь лекарственного эзофагита с остеонекрозом челюсти и ответ C сохраняются.",
+    "sources": [
+      {
+        "label": "Reclast: предупреждение о почках",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a9b3737-9ce6-4a89-b76e-6aab79eba9cf"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:16",
+    "question": 17,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q017-p0081.webp",
+    "sourceQuestionId": "1715",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Первое прохождение через печень",
+    "text": "Комментарий к варианту B смешивает плохое всасывание и пресистемный метаболизм. Низкая биодоступность из-за печёночного first-pass эффекта означает, что препарат уже достиг печени и был там метаболизирован, а не что он недоступен печени. Ответ C о липофильности остаётся лучшим из предложенных.",
+    "sources": [
+      {
+        "label": "Merck Manual: биодоступность",
+        "url": "https://www.merckmanuals.com/professional/clinical-pharmacology/pharmacokinetics/drug-bioavailability"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:18",
+    "question": 19,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q019-p0089.webp",
+    "sourceQuestionId": "1712",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Где происходит ацетилирование",
+    "text": "NAT2-зависимое ацетилирование изониазида происходит в цитозоле. Указание на печёночную микросомальную систему в объяснении неточно. Ответ D — ацетилирование — сохраняется.",
+    "sources": [
+      {
+        "label": "Reactome: NAT2 acetylation",
+        "url": "https://www.reactome.org/content/detail/R-HSA-174967"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:25",
+    "question": 26,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q026-p0126.webp",
+    "sourceQuestionId": "1818",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Уточнение схемы метотрексата",
+    "text": "Фраза «3 раза в неделю» в условии не должна восприниматься как стандартная схема лечения псориаза. Современная инструкция указывает приём один раз в неделю. В исторических схемах недельную дозу могли делить на несколько приёмов в течение короткого периода — это не три отдельные полные дозы в разные дни недели. Ежедневный приём вместо недельного может вызвать тяжёлую токсичность. Ответ E — фолиновая кислота — сохраняется.",
+    "sources": [
+      {
+        "label": "Methotrexate: недельная схема и ошибки приёма",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=4a04756f-e1c9-4d1e-b309-7be31c9176d6&version=101"
+      },
+      {
+        "label": "FDA: исторические недельные схемы",
+        "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/008085s063lbl.pdf"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:28",
+    "question": 29,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q029-p0138.webp",
+    "sourceQuestionId": "17636",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Средняя концентрация при дроблении дозы",
+    "text": "При линейной фармакокинетике, одинаковой суточной дозе, биодоступности и клиренсе средняя равновесная концентрация не меняется: Cavg,ss = F × Dose / (CL × τ). Более частые меньшие дозы уменьшают размах колебаний и пики. Утверждение исходника о неизбежном снижении средней концентрации неверно. D сохраняется в логике задачи о пик-зависимой токсичности; снижение токсичности нельзя обобщать на все препараты.",
+    "sources": [
+      {
+        "label": "Исследование: одинаковая суточная доза и экспозиция",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3581066/"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:29",
+    "question": 30,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q030-p0143.webp",
+    "sourceQuestionId": "1713",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Клиренс и биодоступность — разные параметры",
+    "text": "Снижение почечного выведения может увеличить экспозицию и концентрацию лекарства, но само по себе не означает увеличение его биодоступности F. В комментарии к варианту E эти понятия смешаны. Ответ A связан с частичным обходом пресистемного печёночного метаболизма при ректальном введении.",
+    "sources": [
+      {
+        "label": "Merck Manual: биодоступность",
+        "url": "https://www.merckmanuals.com/professional/clinical-pharmacology/pharmacokinetics/drug-bioavailability"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:33",
+    "question": 34,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q034-p0163.webp",
+    "sourceQuestionId": "1257",
+    "date": "2026-10-15",
+    "kind": "clarification",
+    "title": "Толерантность не исключает угнетение дыхания",
+    "text": "Толерантность к части эффектов опиоидов развивается, но не устраняет риск угнетения дыхания. Оно возможно в любой момент терапии, особенно после увеличения дозы. Фразу исходника о маловероятности этого осложнения у регулярно принимающих опиоиды нельзя считать гарантией безопасности. Ответ G о сохраняющемся запоре остаётся верным.",
+    "sources": [
+      {
+        "label": "Morphine: риск угнетения дыхания",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c847554-3b4b-4d24-a145-2ef7e9b83699"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:43",
+    "question": 44,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q044-p0203.webp",
+    "sourceQuestionId": "1816",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Образование акролеина",
+    "text": "Основное место активации циклофосфамида — печень. При дальнейшем распаде альдофосфамида образуются фосфорамидный иприт и акролеин. Указание, что препарат метаболизируется в акролеин именно почками, неточно: почечное выведение доставляет токсичный метаболит в мочевые пути. Ответ D — месна — сохраняется.",
+    "sources": [
+      {
+        "label": "Cyclophosphamide: метаболизм",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=769ded74-6186-40a8-8e44-ceff67287451"
+      }
+    ],
+    "keyChanged": false
+  },
+  {
+    "id": "topic-2024-general-pharmacology:44",
+    "question": 45,
+    "image": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q045-p0208.webp",
+    "sourceQuestionId": "17635",
+    "date": "2026-10-15",
+    "kind": "correction",
+    "title": "Элиминация, а не метаболизм",
+    "text": "В комментарии к варианту C корректнее говорить об элиминации первого порядка. Аминогликозиды, например гентамицин, практически не метаболизируются и выводятся преимущественно клубочковой фильтрацией. Ответ A о распределении главным образом во внеклеточной жидкости сохраняется.",
+    "sources": [
+      {
+        "label": "Gentamicin: выведение",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=84f6eb1c-a287-489a-8c3e-aa5954cf1992"
+      }
+    ],
+    "keyChanged": false
+  }
+]

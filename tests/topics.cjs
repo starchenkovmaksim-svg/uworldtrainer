@@ -12,12 +12,12 @@ function element(id='') {
  let html='';
  const e={id,children:[],dataset:{},value:'',textContent:'',disabled:false,
  classList:{contains:c=>classes.has(c),add:c=>classes.add(c),remove:c=>classes.delete(c),toggle(c,on){on??=!classes.has(c);on?classes.add(c):classes.delete(c);}},
- append(...v){this.children.push(...v)},replaceChildren(...v){this.children=v},scrollIntoView(){},removeAttribute(){},click(){this.onclick?.()},
+ insertAdjacentHTML(_where,v){html+=v},append(...v){this.children.push(...v)},replaceChildren(...v){this.children=v},scrollIntoView(){},removeAttribute(){},click(){this.onclick?.()},
  get innerHTML(){return html},set innerHTML(v){html=v;this.children=[]},firstElementChild:{removeAttribute(){}}};
  return e;
 }
 const get=id=>{if(!elements.has(id))elements.set(id,element(id));return elements.get(id)};
-const win={},handlers={};
+const win={MedicalNotes:{html:()=>"MEDICAL_NOTE_TEST"}},handlers={};
 const context=vm.createContext({window:win,document:{getElementById:get,createElement:()=>element(),addEventListener:(name,fn)=>handlers[name]=fn,querySelector:()=>null},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},scrollTo(){},confirm:()=>true,console});
 vm.runInContext(fs.readFileSync(path.join(root,'topics-data.js'),'utf8'),context);
 const original=vm.runInContext('JSON.stringify(BLOCKS)',context);
@@ -46,8 +46,8 @@ get('choices').children.find(e=>e.textContent===blocks[0].questions[0].correct).
 assert.ok(!get('submit').disabled);get('submit').click();
 assert.ok(!get('explain').classList.contains('hide'));
 assert.ok(get('result').children[0].className.includes('good'));
-assert.ok(get('explainImages').children.length);
-get('next').click();assert.ok(get('explain').classList.contains('hide'));
+assert.ok(get('explainImages').children.length);assert.match(get('result').innerHTML,/MEDICAL_NOTE_TEST/);
+get('next').click();assert.ok(get('explain').classList.contains('hide'));assert.ok(!get('result').innerHTML.includes('MEDICAL_NOTE_TEST'));
 get('prev').click();assert.ok(!get('explain').classList.contains('hide'));
 assert.ok(storage.has('uworld_topics_guest_v1'));assert.ok(!storage.has('uworld_trainer_guest_v2'));
 const linkedTopic=blocks.find(b=>b.questions.some(q=>q.contextImages?.length));
