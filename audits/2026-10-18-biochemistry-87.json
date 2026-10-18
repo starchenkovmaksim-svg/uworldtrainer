@@ -1,0 +1,72 @@
+{
+  "topic": "topic-2024-biochemistry",
+  "question": 87,
+  "sourceQuestionId": "11960",
+  "reason": "An explanation diagram revealing the answer was placed before a truncated stem. Restored full unanswered text from source page 481 and original electrophoresis exhibit from 478; moved inheritance diagram to explanation. First image URL retained for daily progress identity. Its bytes now match p0481; original p0476 bytes preserved in q087-inheritance-explanation.webp.",
+  "before": {
+    "choices": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "correct": "D",
+    "questionImages": [
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0476.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q087-p0477.webp"
+    ],
+    "explanationImages": [
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0474.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0475.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0477.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0478.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0479.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0480.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0481.webp"
+    ],
+    "sourcePages": [
+      476,
+      477
+    ],
+    "explanationPages": [
+      474,
+      475,
+      477,
+      478,
+      479,
+      480,
+      481
+    ],
+    "sourceQuestionId": "11960"
+  },
+  "after": {
+    "choices": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "correct": "D",
+    "questionImages": [
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0476.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0478.webp"
+    ],
+    "explanationImages": [
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q087-inheritance-explanation.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0475.webp",
+      "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0474.webp"
+    ],
+    "sourcePages": [
+      481,
+      478
+    ],
+    "explanationPages": [
+      476,
+      475,
+      474
+    ],
+    "sourceQuestionId": "11960"
+  }
+}
