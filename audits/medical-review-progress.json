@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-18",
   "total": 5017,
-  "scope": "General Pharmacology: первичное чтение условий и основных объяснений; внешняя проверка найденных неточностей. Это не завершённая медицинская экспертиза всех вопросов.",
-  "firstPassRead": 47,
-  "notes": 13,
+  "scope": "General Pharmacology (47) и Ophthalmology (30): первичное чтение условий и основных объяснений; внешняя проверка отдельных найденных неточностей. Проверка остальных формулировок и графики не завершена. Это не завершённая медицинская экспертиза всех вопросов.",
+  "firstPassRead": 77,
+  "notes": 19,
   "keyChanges": 0,
   "questions": [
     {
@@ -22654,7 +22654,7 @@
     {
       "id": "topic-2024-general-pharmacology:4",
       "status": "source_checked_note",
-      "note": "Связывание с белками и объём распределения"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q005-p0022.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:5",
@@ -22679,12 +22679,12 @@
     {
       "id": "topic-2024-general-pharmacology:9",
       "status": "source_checked_note",
-      "note": "Соединение висмута"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q010-p0052.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:10",
       "status": "source_checked_note",
-      "note": "Potency не равна affinity"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q011-p0056.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:11",
@@ -22694,12 +22694,12 @@
     {
       "id": "topic-2024-general-pharmacology:12",
       "status": "source_checked_note",
-      "note": "Доставка фермента при болезни Гоше"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q013-p0064.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:13",
       "status": "source_checked_note",
-      "note": "Нефротоксичность бисфосфонатов"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q014-p0069.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:14",
@@ -22714,7 +22714,7 @@
     {
       "id": "topic-2024-general-pharmacology:16",
       "status": "source_checked_note",
-      "note": "Первое прохождение через печень"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q017-p0081.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:17",
@@ -22724,7 +22724,7 @@
     {
       "id": "topic-2024-general-pharmacology:18",
       "status": "source_checked_note",
-      "note": "Где происходит ацетилирование"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q019-p0089.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:19",
@@ -22748,8 +22748,8 @@
     },
     {
       "id": "topic-2024-general-pharmacology:23",
-      "status": "first_pass_needs_completion",
-      "note": null
+      "status": "source_checked_note",
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q024-p0116.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:24",
@@ -22759,7 +22759,7 @@
     {
       "id": "topic-2024-general-pharmacology:25",
       "status": "source_checked_note",
-      "note": "Уточнение схемы метотрексата"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q026-p0126.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:26",
@@ -22774,12 +22774,12 @@
     {
       "id": "topic-2024-general-pharmacology:28",
       "status": "source_checked_note",
-      "note": "Средняя концентрация при дроблении дозы"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q029-p0138.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:29",
       "status": "source_checked_note",
-      "note": "Клиренс и биодоступность — разные параметры"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q030-p0143.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:30",
@@ -22799,7 +22799,7 @@
     {
       "id": "topic-2024-general-pharmacology:33",
       "status": "source_checked_note",
-      "note": "Толерантность не исключает угнетение дыхания"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q034-p0163.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:34",
@@ -22808,8 +22808,8 @@
     },
     {
       "id": "topic-2024-general-pharmacology:35",
-      "status": "first_pass_needs_completion",
-      "note": null
+      "status": "source_checked_note",
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q036-p0171.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:36",
@@ -22833,8 +22833,8 @@
     },
     {
       "id": "topic-2024-general-pharmacology:40",
-      "status": "first_pass_needs_completion",
-      "note": null
+      "status": "source_checked_note",
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q041-p0192.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:41",
@@ -22849,12 +22849,12 @@
     {
       "id": "topic-2024-general-pharmacology:43",
       "status": "source_checked_note",
-      "note": "Образование акролеина"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q044-p0203.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:44",
       "status": "source_checked_note",
-      "note": "Элиминация, а не метаболизм"
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q045-p0208.webp"
     },
     {
       "id": "topic-2024-general-pharmacology:45",
@@ -24943,152 +24943,152 @@
     },
     {
       "id": "topic-2024-ophthalmology:0",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:1",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:2",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:3",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:4",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:5",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:6",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:7",
-      "status": "pending",
-      "note": null
+      "status": "source_checked_note",
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/q008-p0045.webp"
     },
     {
       "id": "topic-2024-ophthalmology:8",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:9",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:10",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:11",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:12",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:13",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:14",
-      "status": "pending",
-      "note": null
+      "status": "source_checked_note",
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/q015-p0097.webp"
     },
     {
       "id": "topic-2024-ophthalmology:15",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:16",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:17",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:18",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:19",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:20",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:21",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:22",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:23",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:24",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:25",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:26",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:27",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     },
     {
       "id": "topic-2024-ophthalmology:28",
-      "status": "pending",
-      "note": null
+      "status": "source_checked_note",
+      "note": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/q029-p0193.webp"
     },
     {
       "id": "topic-2024-ophthalmology:29",
-      "status": "pending",
+      "status": "first_pass_needs_completion",
       "note": null
     }
   ]

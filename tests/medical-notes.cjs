@@ -17,4 +17,21 @@ for(const n of notes){
  }
 }
 assert.ok(copies>0);
+// The recovered Gaucher stem retains its progress identity and source key.
+const topicContext={BLOCKS:[]};
+vm.runInNewContext(fs.readFileSync(root+'/topics-data-2024.js','utf8'),topicContext);
+const gaucher=topicContext.BLOCKS.find(b=>b.n==='topic-2024-general-pharmacology').questions[12];
+assert.equal(gaucher.correct,'A');
+assert.equal(gaucher.sourceQuestionId,'18421');
+assert.deepEqual(Array.from(gaucher.sourcePages),[65]);
+assert.ok(gaucher.questionImages[0].endsWith('/q013-p0064.webp'));
+assert.ok(!gaucher.explanationImages.some(u=>u.endsWith('/p0065.webp')));
+const examGaucher=ctx.window.ExamBank.questions.find(q=>q.id==='uw:18421');
+assert.equal(examGaucher.questionImages[0],gaucher.questionImages[0]);
+assert.equal(examGaucher.correct,gaucher.correct);
+assert.deepEqual(Array.from(examGaucher.explanationImages),Array.from(gaucher.explanationImages));
+const progress=JSON.parse(fs.readFileSync(root+'/audits/medical-review-progress.json','utf8'));
+assert.equal(progress.questions.length,progress.total);
+assert.equal(progress.questions.filter(q=>q.status!=='pending').length,progress.firstPassRead);
+assert.equal(progress.questions.filter(q=>q.status==='source_checked_note').length,notes.length);
 console.log(`PASS medical notes: ${notes.length} source-linked notes, ${copies} exam copies, unknown questions unchanged`);
