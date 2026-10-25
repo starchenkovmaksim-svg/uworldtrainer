@@ -24,4 +24,4 @@ for(const [id,expected] of latest){const split=id.lastIndexOf(':'),n=id.slice(0,
 for(const f of orderFixes){assert.equal(f.before.correct,f.after.correct);assert.equal(JSON.stringify(f.before.choices),JSON.stringify(f.after.choices));assert.equal(f.before.questionImages[0],f.after.questionImages[0],'retain daily-progress identity');}
 for(const q of bank.questions){const source=byImage.get(JSON.stringify(q.questionImages));assert.ok(source,q.id);for(const key of ['choices','correct','explanationImages'])assert.equal(JSON.stringify(q[key]),JSON.stringify(source[key]),`${q.id} ${key}`);}
 assert.equal(bank.questions.length,4309);
-console.log('PASS: 5017 practice records, 4309 matching exam copies, valid keys and options, stable IDs and 9 source-confirmed repairs');
+console.log(`PASS: 5017 practice records, 4309 matching exam copies, valid keys and options, stable IDs and ${latest.size} audited repairs`);

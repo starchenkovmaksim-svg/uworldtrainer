@@ -32,7 +32,7 @@
       }
       return out;
     }
-    const valid=bank.questions.filter(q=>q.correct&&q.choices.includes(q.correct)&&q.questionImages.length);
+    const valid=bank.questions.filter(q=>!q.missingMedia&&!q.unavailable&&q.correct&&q.choices.includes(q.correct)&&q.questionImages.length);
     let chosen;
     if(mode==='topic') {
       const pool=valid.filter(q=>q.topics.includes(topic));

@@ -5795,6 +5795,1160 @@
         ],
         "sourceQuestionId": "1708"
       }
+    },
+    {
+      "id": "topic-2024-biochemistry:10",
+      "reason": "Source pages 54-58 refer to a physical-examination exhibit but contain only the question and collagen-synthesis explanation. Mark absent source media; do not replace it with an explanatory diagram. Exclude from new exam selections while retaining stable bank ID and prior attempts.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q011-p0054.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0055.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0056.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0057.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0058.webp"
+        ],
+        "sourcePages": [
+          54
+        ],
+        "explanationPages": [
+          55,
+          56,
+          57,
+          58
+        ],
+        "sourceQuestionId": "1244"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q011-p0054.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0055.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0056.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0057.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0058.webp"
+        ],
+        "sourcePages": [
+          54
+        ],
+        "explanationPages": [
+          55,
+          56,
+          57,
+          58
+        ],
+        "sourceQuestionId": "1244",
+        "missingMedia": true
+      }
+    },
+    {
+      "id": "topic-2024-biochemistry:102",
+      "reason": "Second full-image OCR pass confirmed omitted opening. Restore full source stem before complete exhibit/options, remove misplaced stem copies from explanation, preserve identity.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q103-p0567.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0564.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0565.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0566.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0568.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0569.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0570.webp"
+        ],
+        "sourcePages": [
+          567
+        ],
+        "explanationPages": [
+          564,
+          565,
+          566,
+          568,
+          569,
+          570
+        ],
+        "sourceQuestionId": "11950"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q103-p0567.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0569.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0564.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0565.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0566.webp"
+        ],
+        "sourcePages": [
+          570,
+          569
+        ],
+        "explanationPages": [
+          564,
+          565,
+          566
+        ],
+        "sourceQuestionId": "11950"
+      }
+    },
+    {
+      "id": "topic-2024-biochemistry:104",
+      "reason": "Second full-image OCR pass confirmed omitted opening. Restore full source stem before complete exhibit/options, remove misplaced stem copies from explanation, preserve identity.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q105-p0581.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0577.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0578.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0579.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0580.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0582.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0583.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0584.webp"
+        ],
+        "sourcePages": [
+          581
+        ],
+        "explanationPages": [
+          577,
+          578,
+          579,
+          580,
+          582,
+          583,
+          584
+        ],
+        "sourceQuestionId": "1428"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q105-p0581.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0583.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0577.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0578.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0579.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0580.webp"
+        ],
+        "sourcePages": [
+          584,
+          583
+        ],
+        "explanationPages": [
+          577,
+          578,
+          579,
+          580
+        ],
+        "sourceQuestionId": "1428"
+      }
+    },
+    {
+      "id": "topic-2024-biochemistry:130",
+      "reason": "Second full-image OCR pass confirmed omitted opening. Restore full source stem before complete exhibit/options, remove misplaced stem copies from explanation, preserve identity.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q131-p0723.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0719.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0720.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0721.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0722.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0724.webp"
+        ],
+        "sourcePages": [
+          723
+        ],
+        "explanationPages": [
+          719,
+          720,
+          721,
+          722,
+          724
+        ],
+        "sourceQuestionId": "1071"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q131-p0723.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q131-options-original.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0719.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0720.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0721.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0722.webp"
+        ],
+        "sourcePages": [
+          724,
+          723
+        ],
+        "explanationPages": [
+          719,
+          720,
+          721,
+          722
+        ],
+        "sourceQuestionId": "1071"
+      }
+    },
+    {
+      "id": "topic-2024-general-pharmacology:22",
+      "reason": "Second full-image OCR pass confirmed omitted opening. Restore full source stem before complete exhibit/options, remove misplaced stem copies from explanation, preserve identity.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q023-p0111.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0108.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0107.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0106.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0109.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0110.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0112.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0113.webp"
+        ],
+        "sourcePages": [
+          111
+        ],
+        "explanationPages": [
+          108,
+          107,
+          106,
+          109,
+          110,
+          112,
+          113
+        ],
+        "sourceQuestionId": "1716"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q023-p0111.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q023-options-original.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0108.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0107.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0106.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0109.webp"
+        ],
+        "sourcePages": [
+          113,
+          111
+        ],
+        "explanationPages": [
+          108,
+          107,
+          106,
+          109
+        ],
+        "sourceQuestionId": "1716"
+      }
+    },
+    {
+      "id": "topic-2024-general-pharmacology:32",
+      "reason": "Second full-image OCR pass confirmed omitted opening. Restore full source stem before complete exhibit/options, remove misplaced stem copies from explanation, preserve identity.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q033-p0158.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0155.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0156.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0157.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0159.webp"
+        ],
+        "sourcePages": [
+          158
+        ],
+        "explanationPages": [
+          155,
+          156,
+          157,
+          159
+        ],
+        "sourceQuestionId": "852"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q033-p0158.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q033-options-original.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0155.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0156.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0157.webp"
+        ],
+        "sourcePages": [
+          159,
+          158
+        ],
+        "explanationPages": [
+          155,
+          156,
+          157
+        ],
+        "sourceQuestionId": "852"
+      }
+    },
+    {
+      "id": "topic-2024-biochemistry:92",
+      "reason": "Remove residual option-response percentage from original PDF rendering; question and key unchanged.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0507.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q093-p0508.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0506.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0505.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q093-explanation-original.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0509.webp"
+        ],
+        "sourcePages": [
+          510,
+          508
+        ],
+        "explanationPages": [
+          506,
+          505,
+          507,
+          509
+        ],
+        "sourceQuestionId": "1412"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0507.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q093-p0508.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0506.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0505.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q093-explanation-original.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0509.webp"
+        ],
+        "sourcePages": [
+          510,
+          508
+        ],
+        "explanationPages": [
+          506,
+          505,
+          507,
+          509
+        ],
+        "sourceQuestionId": "1412"
+      }
+    },
+    {
+      "id": "topic-2024-ophthalmology:14",
+      "reason": "Remove residual option-response percentage from original PDF rendering; question and key unchanged.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/q015-p0097.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0097.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0098.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0099.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0100.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0101.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0102.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0103.webp"
+        ],
+        "sourcePages": [
+          97
+        ],
+        "explanationPages": [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ],
+        "sourceQuestionId": "862"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/q015-p0097.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0097.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0098.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0099.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0100.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0101.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0102.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/p0103.webp"
+        ],
+        "sourcePages": [
+          97
+        ],
+        "explanationPages": [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ],
+        "sourceQuestionId": "862"
+      }
+    },
+    {
+      "id": "topic-2024-microbiology:304",
+      "reason": "Move upper crop boundary above the first line instead of through its letter tops; render clean unanswered source page 1559.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "B",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q305-p1559.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p1560.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p1561.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p1562.webp"
+        ],
+        "sourcePages": [
+          1559
+        ],
+        "explanationPages": [
+          1560,
+          1561,
+          1562
+        ],
+        "sourceQuestionId": "15421"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "B",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q305-p1559.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p1560.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p1561.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p1562.webp"
+        ],
+        "sourcePages": [
+          1559
+        ],
+        "explanationPages": [
+          1560,
+          1561,
+          1562
+        ],
+        "sourceQuestionId": "15421"
+      }
+    },
+    {
+      "id": "1:24",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block01/q25_1.webp"
+        ],
+        "explanationImages": [
+          "assets/block01/p084.webp",
+          "assets/block01/p085.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": "C",
+        "sourcePages": [
+          83
+        ],
+        "explanationPages": [
+          84,
+          85
+        ]
+      },
+      "after": {
+        "questionImages": [
+          "assets/block01/q25_1.webp"
+        ],
+        "explanationImages": [
+          "assets/block01/p084.webp",
+          "assets/block01/p085.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": "C",
+        "sourcePages": [
+          83
+        ],
+        "explanationPages": [
+          84,
+          85
+        ],
+        "contextImages": [
+          "assets/block01/q24_1.webp"
+        ]
+      }
+    },
+    {
+      "id": "4:32",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block04/p119.webp"
+        ],
+        "explanationImages": [
+          "assets/block04/p120.webp",
+          "assets/block04/p121.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "sourcePages": [
+          119
+        ],
+        "explanationPages": [
+          120,
+          121
+        ],
+        "sourceQuestionId": "11947",
+        "legacyIndex": 32,
+        "progressKey": "4:32"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block04/p119.webp"
+        ],
+        "explanationImages": [
+          "assets/block04/p120.webp",
+          "assets/block04/p121.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "sourcePages": [
+          119
+        ],
+        "explanationPages": [
+          120,
+          121
+        ],
+        "sourceQuestionId": "11947",
+        "legacyIndex": 32,
+        "progressKey": "4:32",
+        "contextImages": [
+          "assets/block04/p113.webp"
+        ]
+      }
+    },
+    {
+      "id": "5:6",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block05/p020.webp"
+        ],
+        "explanationImages": [
+          "assets/block05/p021.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "sourcePages": [
+          20
+        ],
+        "explanationPages": [
+          21
+        ],
+        "sourceQuestionId": "12115",
+        "legacyIndex": 6,
+        "progressKey": "5:6"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block05/p020.webp"
+        ],
+        "explanationImages": [
+          "assets/block05/p021.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "sourcePages": [
+          20
+        ],
+        "explanationPages": [
+          21
+        ],
+        "sourceQuestionId": "12115",
+        "legacyIndex": 6,
+        "progressKey": "5:6",
+        "contextImages": [
+          "assets/block05/p017.webp"
+        ]
+      }
+    },
+    {
+      "id": "8:23",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block08/p078.webp"
+        ],
+        "explanationImages": [
+          "assets/block08/p079.webp",
+          "assets/block08/p080.webp",
+          "assets/block08/p081.webp",
+          "assets/block08/p082.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "B",
+        "sourcePages": [
+          78
+        ],
+        "explanationPages": [
+          79,
+          80,
+          81,
+          82
+        ],
+        "sourceQuestionId": "4774",
+        "legacyIndex": 23,
+        "progressKey": "8:23"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block08/p078.webp"
+        ],
+        "explanationImages": [
+          "assets/block08/p079.webp",
+          "assets/block08/p080.webp",
+          "assets/block08/p081.webp",
+          "assets/block08/p082.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "B",
+        "sourcePages": [
+          78
+        ],
+        "explanationPages": [
+          79,
+          80,
+          81,
+          82
+        ],
+        "sourceQuestionId": "4774",
+        "legacyIndex": 23,
+        "progressKey": "8:23",
+        "contextImages": [
+          "assets/block08/p075.webp"
+        ]
+      }
+    },
+    {
+      "id": "8:29",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block08/p096.webp"
+        ],
+        "explanationImages": [
+          "assets/block08/p097.webp",
+          "assets/block08/p098.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "C",
+        "sourcePages": [
+          96
+        ],
+        "explanationPages": [
+          97,
+          98
+        ],
+        "sourceQuestionId": "4792",
+        "legacyIndex": 29,
+        "progressKey": "8:29"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block08/p096.webp"
+        ],
+        "explanationImages": [
+          "assets/block08/p097.webp",
+          "assets/block08/p098.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "C",
+        "sourcePages": [
+          96
+        ],
+        "explanationPages": [
+          97,
+          98
+        ],
+        "sourceQuestionId": "4792",
+        "legacyIndex": 29,
+        "progressKey": "8:29",
+        "contextImages": [
+          "assets/block08/p093.webp"
+        ]
+      }
+    },
+    {
+      "id": "10:6",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block10/p020.webp"
+        ],
+        "explanationImages": [
+          "assets/block10/p021.webp",
+          "assets/block10/p023.webp",
+          "assets/block10/p024.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "E",
+        "sourcePages": [
+          20
+        ],
+        "explanationPages": [
+          21,
+          23,
+          24
+        ],
+        "sourceQuestionId": "4809",
+        "legacyIndex": 6,
+        "progressKey": "10:6"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block10/p020.webp"
+        ],
+        "explanationImages": [
+          "assets/block10/p021.webp",
+          "assets/block10/p023.webp",
+          "assets/block10/p024.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "E",
+        "sourcePages": [
+          20
+        ],
+        "explanationPages": [
+          21,
+          23,
+          24
+        ],
+        "sourceQuestionId": "4809",
+        "legacyIndex": 6,
+        "progressKey": "10:6",
+        "contextImages": [
+          "assets/block10/p017.webp"
+        ]
+      }
+    },
+    {
+      "id": "10:16",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block10/p064.webp"
+        ],
+        "explanationImages": [
+          "assets/block10/p065.webp",
+          "assets/block10/p066.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "sourcePages": [
+          64
+        ],
+        "explanationPages": [
+          65,
+          66
+        ],
+        "sourceQuestionId": "4798",
+        "legacyIndex": 16,
+        "progressKey": "10:16"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block10/p064.webp"
+        ],
+        "explanationImages": [
+          "assets/block10/p065.webp",
+          "assets/block10/p066.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "sourcePages": [
+          64
+        ],
+        "explanationPages": [
+          65,
+          66
+        ],
+        "sourceQuestionId": "4798",
+        "legacyIndex": 16,
+        "progressKey": "10:16",
+        "contextImages": [
+          "assets/block10/p059.webp",
+          "assets/block10/p060.webp"
+        ]
+      }
+    },
+    {
+      "id": "12:1",
+      "reason": "Second item of a confirmed two-part vignette: expose preceding unanswered stem in a separate collapsible context section; no explanation/answer supplied.",
+      "before": {
+        "questionImages": [
+          "assets/block12/p004.webp"
+        ],
+        "explanationImages": [
+          "assets/block12/p005.webp",
+          "assets/block12/p006.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "A",
+        "sourcePages": [
+          4
+        ],
+        "explanationPages": [
+          5,
+          6
+        ],
+        "sourceQuestionId": "4937",
+        "legacyIndex": 1,
+        "progressKey": "12:1"
+      },
+      "after": {
+        "questionImages": [
+          "assets/block12/p004.webp"
+        ],
+        "explanationImages": [
+          "assets/block12/p005.webp",
+          "assets/block12/p006.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "A",
+        "sourcePages": [
+          4
+        ],
+        "explanationPages": [
+          5,
+          6
+        ],
+        "sourceQuestionId": "4937",
+        "legacyIndex": 1,
+        "progressKey": "12:1",
+        "contextImages": [
+          "assets/block12/p001.webp"
+        ]
+      }
+    },
+    {
+      "id": "1:17",
+      "reason": "Source question ID 4305 has option F cropped off. Use complete identical vignette/options from Endocrinology question 74, PDF page 150; visually matched patient, labs, options A-F and source ID. Preserve first URL and answer key.",
+      "before": {
+        "questionImages": [
+          "assets/block01/q18_1.webp"
+        ],
+        "explanationImages": [
+          "assets/block01/p061.webp",
+          "assets/block01/p062.webp",
+          "assets/block01/p063.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "sourcePages": [
+          60
+        ],
+        "explanationPages": [
+          61,
+          62,
+          63
+        ]
+      },
+      "after": {
+        "questionImages": [
+          "assets/block01/q18_1.webp"
+        ],
+        "explanationImages": [
+          "assets/block01/p061.webp",
+          "assets/block01/p062.webp",
+          "assets/block01/p063.webp"
+        ],
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "correct": "A",
+        "sourcePages": [
+          60
+        ],
+        "explanationPages": [
+          61,
+          62,
+          63
+        ]
+      }
     }
   ],
   "assets": [
@@ -5872,6 +7026,66 @@
       "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q040-p0186.webp",
       "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0185.webp",
       "sha256": "47bb0527ad16eb58ea4ecf6017d0d82c41ece5d4e99b0252a6126afa923e1f84"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0570.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q103-p0567.webp",
+      "sha256": "697648104a12c1650e322abc6d003368134a32287c80f719bb91703396bbad0a"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0584.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q105-p0581.webp",
+      "sha256": "1e2c8b4e8528c146206982d8d5bda8de264d40525961b1e06fa17cc906fe2984"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q131-p0723.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q131-options-original.webp",
+      "sha256": "9e0aa6ca77c3f998eab3dfff4f1bc6a34ebb89f5780a6a55447bdeb7072284fc"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0724.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q131-p0723.webp",
+      "sha256": "472c45e642be591982e5b7e7d02d07292e5eeda951184dab73f0ea4b9f089a7a"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q023-p0111.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q023-options-original.webp",
+      "sha256": "47783e0428b9181710dc1490a235a7ba6ca0f0b8f0a923510cd22d9bbf0c31eb"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0113.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q023-p0111.webp",
+      "sha256": "52bf9fb902333a15346b53657129028f6bb22e08a65968aa88074aa3e5171910"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q033-p0158.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q033-options-original.webp",
+      "sha256": "78e3d1aacecfdb344ab047eb3ba4c896f9ca143d123a52f9439c925780739ee3"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0159.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q033-p0158.webp",
+      "sha256": "0adaa4a26ae2bb10f57c4c081db4b7434e0d156ec1ec57ebd6f83fa4e735f402"
+    },
+    {
+      "source": "Original PDF page 508, rendered without option percentages or answer controls. Percent parser handles OCR variants %>, and degree-slash-o.",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q093-p0508.webp",
+      "sha256": "0aa85c796bb8a36190906773ea4610d36144662b562e7c06a33c9978a311cae8"
+    },
+    {
+      "source": "Original PDF page 97, rendered without option percentages or answer controls. Percent parser handles OCR variants %>, and degree-slash-o.",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/ophthalmology/q015-p0097.webp",
+      "sha256": "5bab6cd06801f3d66cb5273d206d5cb49a857557f9fe1446d35ca15b19f9c1e1"
+    },
+    {
+      "source": "Original Microbiology PDF page 1559, clip [0,37,page.width,387]",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q305-p1559.webp",
+      "sha256": "660033d7bb272ef06ba5e56ba72cff862787ebc9ab4681ec75d795f11e5cd9c7"
+    },
+    {
+      "source": "topics-assets/endocrinology/q074_1.webp",
+      "target": "assets/block01/q18_1.webp",
+      "sha256": "d37c502ee051a7b43758eb0b88115b453926e328b9e176c3150981c1298e61a7"
     }
   ],
   "nearDuplicateReview": {
@@ -5880,7 +7094,7 @@
     "retained": 4,
     "reasonRetained": "Graphical answer continuations include unique complete options; not duplicates."
   },
-  "correctedQuestions": 82,
+  "correctedQuestions": 97,
   "explanationSequencesReordered": 27,
   "lastUpdated": "2026-10-25"
 }

@@ -10,6 +10,9 @@ for(const [mode,s]of[['full',full],['daily',daily]]){
  for(const id in wanted)assert.equal(s.questions.filter(q=>q.system===id).length,wanted[id]);
 }
 assert.throws(()=>C.select({...B,questions:B.questions.filter(q=>q.system!=='development')},'full'),/доступно/);
+const incompleteTopicBank={...B,questions:B.questions.filter(q=>q.topics.includes('topic-2024-biochemistry')).map(q=>({...q,missingMedia:true}))};
+assert.throws(()=>C.select(incompleteTopicBank,'topic','topic-2024-biochemistry'),/нет подходящих/);
+assert.ok(!C.select(B,'topic','topic-2024-biochemistry').questions.some(q=>q.missingMedia));
 const topic=B.topics.find(t=>t.title==='Ophthalmology'),selection=C.select(B,'topic',topic.id);
 assert.equal(selection.questions.length,30);
 const make=(mode='full',sel=full,now=1000)=>C.create({id:'test',device:'test-device',mode,title:'test',topic:topic.id,selection:sel,version:B.version,now});
