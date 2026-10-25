@@ -5525,6 +5525,276 @@
         ],
         "sourceQuestionId": "8530"
       }
+    },
+    {
+      "id": "topic-2024-microbiology:30",
+      "reason": "Move explanatory differential table out of question.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q031-p0144.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q031-p0145.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0146.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0147.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0148.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0149.webp"
+        ],
+        "sourcePages": [
+          144,
+          145
+        ],
+        "explanationPages": [
+          146,
+          147,
+          148,
+          149
+        ],
+        "sourceQuestionId": "11604"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "D",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q031-p0144.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q031-p0145.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0146.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0147.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0148.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0149.webp"
+        ],
+        "sourcePages": [
+          144
+        ],
+        "explanationPages": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ],
+        "sourceQuestionId": "11604"
+      }
+    },
+    {
+      "id": "topic-2024-microbiology:186",
+      "reason": "Extract original microscopy exhibit from PDF page 916, clip [381,119,890,557], to exclude visible correct-answer marks outside exhibit. No diagnostic pixels redrawn.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "B",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q187-p0915.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q187-p0916.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0917.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0918.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0919.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0920.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0921.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0922.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0923.webp"
+        ],
+        "sourcePages": [
+          915,
+          916
+        ],
+        "explanationPages": [
+          917,
+          918,
+          919,
+          920,
+          921,
+          922,
+          923
+        ],
+        "sourceQuestionId": "16855"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "B",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q187-p0915.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/q187-exhibit.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0917.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0918.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0919.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0920.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0921.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0922.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/microbiology/p0923.webp"
+        ],
+        "sourcePages": [
+          915,
+          916
+        ],
+        "explanationPages": [
+          917,
+          918,
+          919,
+          920,
+          921,
+          922,
+          923
+        ],
+        "sourceQuestionId": "16855"
+      }
+    },
+    {
+      "id": "topic-2024-biochemistry:111",
+      "reason": "Restore complete opening before exhibit; move explanatory splicing diagram after answer and replace percentage-marked options with clean original.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0616.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q112-p0617.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0615.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0617.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0618.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0619.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0620.webp"
+        ],
+        "sourcePages": [
+          616,
+          617
+        ],
+        "explanationPages": [
+          615,
+          617,
+          618,
+          619,
+          620
+        ],
+        "sourceQuestionId": "2038"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "C",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0616.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0618.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0615.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q112-explanation-original.webp"
+        ],
+        "sourcePages": [
+          619,
+          618
+        ],
+        "explanationPages": [
+          615,
+          616
+        ],
+        "sourceQuestionId": "2038"
+      }
+    },
+    {
+      "id": "topic-2024-general-pharmacology:39",
+      "reason": "Show complete question before enlarged exhibit, preserving stable first-image URL.",
+      "before": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0185.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q040-p0186.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0182.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0183.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0184.webp"
+        ],
+        "sourcePages": [
+          185,
+          186
+        ],
+        "explanationPages": [
+          182,
+          183,
+          184
+        ],
+        "sourceQuestionId": "1708"
+      },
+      "after": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correct": "E",
+        "questionImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0185.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q040-exhibit-original.webp"
+        ],
+        "explanationImages": [
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0182.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0183.webp",
+          "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0184.webp"
+        ],
+        "sourcePages": [
+          186,
+          185
+        ],
+        "explanationPages": [
+          182,
+          183,
+          184
+        ],
+        "sourceQuestionId": "1708"
+      }
     }
   ],
   "assets": [
@@ -5582,6 +5852,26 @@
       "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q126-p0700.webp",
       "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0699.webp",
       "sha256": "cabec3730b0cf4fa67e15675a897d11ea0e1d7eef0896b4428342b95f78e400e"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0616.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/q112-explanation-original.webp",
+      "sha256": "d56ae9c5954586158efacbd1a8fc5f5e294bd48ee891a8d1a5558d6f05d32381"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0619.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/biochemistry/p0616.webp",
+      "sha256": "3649dd02152fdd836015642bc528bf4ff098ba7908714d0f718bcdf9f56b050d"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0185.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q040-exhibit-original.webp",
+      "sha256": "a02daecd1ac3abdeb57bbcad1c19b804bae43cfe94724911c1280f37338130d7"
+    },
+    {
+      "source": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/q040-p0186.webp",
+      "target": "https://starchenkovmaksim-svg.github.io/uworldtrainer-2024-assets/assets/general-pharmacology/p0185.webp",
+      "sha256": "47bb0527ad16eb58ea4ecf6017d0d82c41ece5d4e99b0252a6126afa923e1f84"
     }
   ],
   "nearDuplicateReview": {
@@ -5590,6 +5880,7 @@
     "retained": 4,
     "reasonRetained": "Graphical answer continuations include unique complete options; not duplicates."
   },
-  "correctedQuestions": 78,
-  "explanationSequencesReordered": 27
+  "correctedQuestions": 82,
+  "explanationSequencesReordered": 27,
+  "lastUpdated": "2026-10-25"
 }
