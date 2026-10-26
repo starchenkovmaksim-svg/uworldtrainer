@@ -148,5 +148,8 @@
     await sessionChanged(data.session);
   } catch (_) {
     message('Не удалось подключить облако. Проверьте интернет и обновите страницу.');
+  } finally {
+    window.trainer.sessionReady = true;
+    window.StudyResume?.refresh();
   }
 })();
