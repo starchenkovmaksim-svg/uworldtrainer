@@ -17,6 +17,15 @@
     view={width:stage.clientWidth,height:stage.clientHeight,u:(v.left+stage.clientWidth/2-r.left)/pixels,v:(v.top+stage.clientHeight/2-r.top)/pixels};
   }
   function fit(){if(!ready)return;pixels=Math.max(1,Math.min(stage.clientWidth-24,(full?b[0]:b[2])*1.25));refresh();stage.scrollTo(0,0);const r=frame.getBoundingClientRect(),v=stage.getBoundingClientRect();stage.scrollBy(r.left-v.left-(stage.clientWidth-pixels)/2,r.top-v.top-12);rememberView(true);}
+  function keepImageVisible(){
+    const r=frame.getBoundingClientRect(),v=stage.getBoundingClientRect();
+    const width=pixels,height=pixels*b[1]/(full?b[0]:b[2]);
+    function offset(position,size,available){
+      const low=Math.min(12,available-size-12),high=Math.max(12,available-size-12);
+      return position-Math.max(low,Math.min(high,position));
+    }
+    stage.scrollBy(offset(r.left-v.left,width,stage.clientWidth),offset(r.top-v.top,height,stage.clientHeight));
+  }
   function relayout(){
     layoutFrame=0;if(!dialog.open||!ready||!stage.clientWidth||!stage.clientHeight)return;
     if(!view){fit();return;}
@@ -24,20 +33,20 @@
     const anchor=view;resetPointers();refresh();
     const r=frame.getBoundingClientRect(),v=stage.getBoundingClientRect();
     stage.scrollBy(r.left+anchor.u*pixels-v.left-stage.clientWidth/2,r.top+anchor.v*pixels-v.top-stage.clientHeight/2);
-    rememberView(true);
+    keepImageVisible();rememberView(true);
   }
   function scheduleLayout(){if(dialog.open&&!layoutFrame)layoutFrame=requestAnimationFrame(relayout);}
   stage.addEventListener('scroll',()=>rememberView(),{passive:true});
-  function zoom(factor,clientX,clientY){
+  function zoom(factor,clientX,clientY,targetX=clientX,targetY=clientY){
     if(!ready)return;
     const viewport=stage.getBoundingClientRect(),before=frame.getBoundingClientRect();
-    const x=clientX??viewport.left+stage.clientWidth/2,y=clientY??viewport.top+stage.clientHeight/2;
+    const x=clientX??Math.max(before.left,Math.min(before.left+pixels,viewport.left+stage.clientWidth/2)),y=clientY??Math.max(before.top,Math.min(before.top+pixels*b[1]/(full?b[0]:b[2]),viewport.top+stage.clientHeight/2));
     const u=(x-before.left)/pixels,v=(y-before.top)/pixels;
     const next=Math.max(96,Math.min((full?b[0]:b[2])*5,pixels*factor));
-    if(next===pixels)return;
+    if(next===pixels&&targetX===clientX&&targetY===clientY)return;
     pixels=next;refresh();
     const after=frame.getBoundingClientRect();
-    stage.scrollBy(after.left+u*pixels-x,after.top+v*pixels-y);
+    stage.scrollBy(after.left+u*pixels-(targetX??x),after.top+v*pixels-(targetY??y));
     rememberView(true);
   }
   stage.addEventListener('wheel',e=>{
@@ -53,10 +62,18 @@
   // Pointer capture supports both mouse panning and two-finger pinch, without changing browser zoom.
   const pointers=new Map();let lastDistance=0;
   function resetPointers(){const ids=[...pointers.keys()];pointers.clear();lastDistance=0;for(const id of ids)if(stage.hasPointerCapture(id))stage.releasePointerCapture(id);}
-  stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointers.set(e.pointerId,[e.clientX,e.clientY]);stage.setPointerCapture(e.pointerId);lastDistance=pointers.size===2?distance():0;});
+  stage.addEventListener('pointerdown',e=>{if(e.button!==0||!ready||pointers.size>=2)return;pointers.set(e.pointerId,[e.clientX,e.clientY]);stage.setPointerCapture(e.pointerId);lastDistance=pointers.size===2?distance():0;});
   function distance(){const [a,b]=[...pointers.values()];return Math.hypot(a[0]-b[0],a[1]-b[1]);}
-  stage.addEventListener('pointermove',e=>{const prev=pointers.get(e.pointerId);if(!prev)return;pointers.set(e.pointerId,[e.clientX,e.clientY]);if(pointers.size===2){const d=distance();if(lastDistance>0){const [a,b]=[...pointers.values()];zoom(d/lastDistance,(a[0]+b[0])/2,(a[1]+b[1])/2);}lastDistance=d;}else if(pointers.size===1){stage.scrollLeft+=prev[0]-e.clientX;stage.scrollTop+=prev[1]-e.clientY;rememberView(true);}});
-  for(const name of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(name,e=>{pointers.delete(e.pointerId);lastDistance=0;});
+  stage.addEventListener('pointermove',e=>{
+    const prev=pointers.get(e.pointerId);if(!prev)return;
+    const old=[...pointers.values()];pointers.set(e.pointerId,[e.clientX,e.clientY]);
+    if(pointers.size===2){
+      const d=distance(),[a,b]=[...pointers.values()];
+      if(lastDistance>0)zoom(d/lastDistance,(old[0][0]+old[1][0])/2,(old[0][1]+old[1][1])/2,(a[0]+b[0])/2,(a[1]+b[1])/2);
+      lastDistance=d;
+    }else{stage.scrollLeft+=prev[0]-e.clientX;stage.scrollTop+=prev[1]-e.clientY;rememberView(true);}
+  });
+  for(const name of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(name,e=>{if(pointers.delete(e.pointerId))lastDistance=0;});
   dialog.addEventListener('close',resetPointers);window.addEventListener('resize',scheduleLayout);
   window.visualViewport?.addEventListener('resize',scheduleLayout);
   if(typeof ResizeObserver!=='undefined')new ResizeObserver(scheduleLayout).observe(stage);

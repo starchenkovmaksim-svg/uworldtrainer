@@ -4,3 +4,12 @@
 @media(max-width:600px){.scan-viewer{width:100vw;height:100dvh;max-width:none;margin:0;border-radius:0;border:0}.scan-toolbar{gap:5px;padding:8px}.scan-toolbar strong{font-size:14px}.scan-controls{gap:4px}.scan-controls button{padding:8px;font-size:12px}.scan-help{font-size:11px}.scan-stage{padding:6px}}
 
 .scan-plane{position:relative;overflow:hidden}.scan-plane>.scan-frame{position:absolute;max-width:none;margin:0;border-radius:0;overflow-anchor:none}.scan-stage{overflow-anchor:none;scroll-behavior:auto}
+
+/* Keep the viewer full-screen on phones in either orientation. */
+.scan-toolbar,.scan-help,.scan-error{flex-shrink:0}
+@media(max-width:600px),(max-height:500px) and (pointer:coarse){
+  .scan-viewer{box-sizing:border-box;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;border:0;border-radius:0}
+  .scan-toolbar{padding-top:max(8px,env(safe-area-inset-top));padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right))}
+  .scan-help{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+}
+@media(max-height:500px){.scan-toolbar strong,.scan-help{display:none}.scan-toolbar{padding:4px 8px}.scan-controls{width:100%;justify-content:center}}
