@@ -5,118 +5,141 @@
     [
       [
         "Гемоглобин · Hb",
-        "М: 135–175; Ж: 120–160 г/л",
-        "hemoglobin"
+        "М: 13,5–17,5; Ж: 12–16 g/dL",
+        "hemoglobin",
+        "М: 135–175; Ж: 120–160 г/л"
       ],
       [
         "Гематокрит · Hct",
         "М: 41–53%; Ж: 36–46%",
-        "hematocrit"
+        "hematocrit",
+        "М: 41–53%; Ж: 36–46%"
       ],
       [
         "Лейкоциты · WBC",
-        "4,5–11 × 10⁹/л",
-        "leukocytes"
+        "4500–11000/мкл",
+        "leukocytes",
+        "4,5–11 × 10⁹/л"
       ],
       [
         "Тромбоциты · PLT",
-        "150–400 × 10⁹/л",
-        "platelets"
+        "150000–400000/мкл",
+        "platelets",
+        "150–400 × 10⁹/л"
       ],
       [
         "MCV",
         "80–100 фл",
-        "объем эритроцитов"
+        "объем эритроцитов",
+        "80–100 фл"
       ],
       [
         "Ретикулоциты",
         "0,5–1,5%",
-        "reticulocytes"
+        "reticulocytes",
+        "0,5–1,5%"
       ],
       [
         "Протромбиновое время · PT",
         "11–15 с",
-        "coagulation"
+        "coagulation",
+        "11–15 с"
       ],
       [
         "АЧТВ · aPTT",
         "25–40 с",
-        "ptt coagulation"
+        "ptt coagulation",
+        "25–40 с"
       ],
       [
         "Эритроциты · RBC",
         "М: 4,3–5,9; Ж: 3,5–5,5 × 10¹²/л",
-        "red blood cells"
+        "red blood cells",
+        "М: 4,3–5,9; Ж: 3,5–5,5 × 10¹²/л"
       ],
       [
         "MCH",
         "25–35 пг/клетку",
-        "гемоглобин эритроцит"
+        "гемоглобин эритроцит",
+        "25–35 пг/клетку"
       ],
       [
         "MCHC",
         "31–36 г/дл",
-        "концентрация гемоглобина"
+        "концентрация гемоглобина",
+        "31–36 г/дл"
       ],
       [
         "Нейтрофилы сегментоядерные",
         "54–62%",
-        "neutrophils segmented"
+        "neutrophils segmented",
+        "54–62%"
       ],
       [
         "Нейтрофилы палочкоядерные",
         "3–5%",
-        "neutrophils bands"
+        "neutrophils bands",
+        "3–5%"
       ],
       [
         "Лимфоциты",
         "25–33%",
-        "lymphocytes"
+        "lymphocytes",
+        "25–33%"
       ],
       [
         "Моноциты",
         "3–7%",
-        "monocytes"
+        "monocytes",
+        "3–7%"
       ],
       [
         "Эозинофилы",
         "1–3%",
-        "eosinophils"
+        "eosinophils",
+        "1–3%"
       ],
       [
         "Базофилы",
         "0–0,75%",
-        "basophils"
+        "basophils",
+        "0–0,75%"
       ],
       [
         "D-димер",
         "≤250 ng/mL; зависит от метода и единиц лаборатории",
-        "d-dimer"
+        "d-dimer",
+        "≤250 мкг/л; зависит от метода и единиц лаборатории"
       ],
       [
         "СОЭ · Westergren",
         "М: 0–15; Ж: 0–20 мм/ч",
-        "esr sedimentation"
+        "esr sedimentation",
+        "М: 0–15; Ж: 0–20 мм/ч"
       ],
       [
         "CD4⁺ T-лимфоциты",
         "≥500 клеток/мкл",
-        "cd4 lymphocyte"
+        "cd4 lymphocyte",
+        "≥500 клеток/мкл"
       ],
       [
         "HbA1c · таблица USMLE",
         "≤6%; это справочный диапазон таблицы, не диагностический порог диабета",
-        "гликированный гемоглобин a1c"
+        "гликированный гемоглобин a1c",
+        "≤42 ммоль/моль; справочный диапазон таблицы, не диагностический порог диабета"
       ],
       [
         "Объём плазмы",
         "М: 25–43; Ж: 28–45 мл/кг",
-        "plasma volume"
+        "plasma volume",
+        "М: 25–43; Ж: 28–45 мл/кг"
       ],
       [
         "Объём эритроцитов",
         "М: 20–36; Ж: 19–31 мл/кг",
-        "red cell volume"
+        "red cell volume",
+        "М: 20–36; Ж: 19–31 мл/кг"
       ]
     ]
   ],
@@ -125,138 +148,165 @@
     [
       [
         "Натрий · Na⁺",
-        "136–146 ммоль/л",
-        "sodium"
+        "136–146 mEq/L",
+        "sodium",
+        "136–146 ммоль/л"
       ],
       [
         "Калий · K⁺",
-        "3,5–5,0 ммоль/л",
-        "potassium"
+        "3,5–5,0 mEq/L",
+        "potassium",
+        "3,5–5,0 ммоль/л"
       ],
       [
         "Хлор · Cl⁻",
-        "95–105 ммоль/л",
-        "chloride"
+        "95–105 mEq/L",
+        "chloride",
+        "95–105 ммоль/л"
       ],
       [
         "Бикарбонат · HCO₃⁻",
-        "22–28 ммоль/л",
-        "hco3 bicarbonate"
+        "22–28 mEq/L",
+        "hco3 bicarbonate",
+        "22–28 ммоль/л"
       ],
       [
         "Кальций общий · Ca",
         "8,4–10,2 mg/dL",
-        "calcium"
+        "calcium",
+        "2,1–2,6 ммоль/л"
       ],
       [
         "Креатинин",
         "0,6–1,2 mg/dL",
-        "creatinine"
+        "creatinine",
+        "53–106 мкмоль/л"
       ],
       [
         "Азот мочевины · BUN",
         "7–18 mg/dL",
-        "urea nitrogen"
+        "urea nitrogen",
+        "Мочевина: 2,5–6,4 ммоль/л"
       ],
       [
         "Глюкоза натощак",
         "70–100 mg/dL",
-        "glucose fasting"
+        "glucose fasting",
+        "3,8–5,6 ммоль/л"
       ],
       [
         "Осмоляльность сыворотки",
         "275–295 мОсм/кг",
-        "osmolality"
+        "osmolality",
+        "275–295 мОсм/кг"
       ],
       [
         "АЛТ · ALT",
         "10–40 Ед/л",
-        "alanine"
+        "alanine",
+        "10–40 Ед/л"
       ],
       [
         "АСТ · AST",
         "12–38 Ед/л",
-        "aspartate"
+        "aspartate",
+        "12–38 Ед/л"
       ],
       [
         "Щелочная фосфатаза · ALP",
         "25–100 Ед/л",
-        "alkaline phosphatase"
+        "alkaline phosphatase",
+        "25–100 Ед/л"
       ],
       [
         "Билирубин общий",
         "0,1–1,0 mg/dL",
-        "bilirubin total"
+        "bilirubin total",
+        "2–17 мкмоль/л"
       ],
       [
         "Билирубин прямой",
         "0–0,3 mg/dL",
-        "bilirubin direct"
+        "bilirubin direct",
+        "0–5 мкмоль/л"
       ],
       [
         "Альбумин",
-        "35–55 г/л",
-        "albumin"
+        "3,5–5,5 g/dL",
+        "albumin",
+        "35–55 г/л"
       ],
       [
         "Магний · Mg²⁺",
-        "0,75–1,0 ммоль/л (SI в таблице USMLE)",
-        "magnesium"
+        "1,8–2,4 mg/dL (пересчёт из SI)",
+        "magnesium",
+        "0,75–1,0 ммоль/л"
       ],
       [
         "Фосфор неорганический",
         "3,0–4,5 mg/dL",
-        "phosphorus phosphate"
+        "phosphorus phosphate",
+        "1,0–1,5 ммоль/л"
       ],
       [
         "Глюкоза не натощак",
         "<140 mg/dL",
-        "glucose random"
+        "glucose random",
+        "<7,77 ммоль/л"
       ],
       [
         "Общий белок",
-        "60–78 г/л",
-        "total protein"
+        "6,0–7,8 g/dL",
+        "total protein",
+        "60–78 г/л"
       ],
       [
         "Глобулины",
-        "23–35 г/л",
-        "globulins"
+        "2,3–3,5 g/dL",
+        "globulins",
+        "23–35 г/л"
       ],
       [
         "Амилаза",
         "25–125 Ед/л",
-        "amylase"
+        "amylase",
+        "25–125 Ед/л"
       ],
       [
         "Липаза",
         "13–60 Ед/л",
-        "lipase"
+        "lipase",
+        "13–60 Ед/л"
       ],
       [
         "Клиренс креатинина",
         "М: 97–137; Ж: 88–128 мл/мин",
-        "creatinine clearance"
+        "creatinine clearance",
+        "М: 97–137; Ж: 88–128 мл/мин"
       ],
       [
         "Креатинкиназа · CK",
         "М: 25–90; Ж: 10–70 Ед/л",
-        "creatine kinase кфк"
+        "creatine kinase кфк",
+        "М: 25–90; Ж: 10–70 Ед/л"
       ],
       [
         "ЛДГ · LDH",
         "45–200 Ед/л",
-        "lactate dehydrogenase"
+        "lactate dehydrogenase",
+        "45–200 Ед/л"
       ],
       [
         "Тропонин I",
-        "≤0,04 ng/mL; для высокочувствительного теста используйте референс лаборатории",
-        "troponin"
+        "≤0,04 ng/mL; для высокочувствительного теста — референс лаборатории",
+        "troponin",
+        "≤0,04 мкг/л; для высокочувствительного теста — референс лаборатории"
       ],
       [
         "Мочевая кислота",
         "3,0–8,2 mg/dL",
-        "uric acid"
+        "uric acid",
+        "0,18–0,48 ммоль/л"
       ]
     ]
   ],
@@ -265,83 +315,99 @@
     [
       [
         "ТТГ · TSH",
-        "0,4–4,0 мМЕ/л",
-        "thyroid"
+        "0,4–4,0 μIU/mL",
+        "thyroid",
+        "0,4–4,0 мМЕ/л"
       ],
       [
         "Свободный T4",
         "0,9–1,7 ng/dL",
-        "free ft4 thyroxine"
+        "free ft4 thyroxine",
+        "12,0–21,9 пмоль/л"
       ],
       [
         "Паратгормон · PTH",
         "10–60 pg/mL",
-        "parathyroid"
+        "parathyroid",
+        "10–60 нг/л"
       ],
       [
         "Кортизол · 08:00",
         "5–23 μg/dL",
-        "cortisol"
+        "cortisol",
+        "138–635 нмоль/л"
       ],
       [
         "ФСГ · FSH",
         "М: 4–25; Ж до менопаузы: 4–30; пик цикла: 10–90; после менопаузы: 40–250 мМЕ/мл",
-        "follicle stimulating"
+        "follicle stimulating",
+        "М: 4–25; Ж до менопаузы: 4–30; пик цикла: 10–90; после менопаузы: 40–250 МЕ/л"
       ],
       [
         "ЛГ · LH",
         "М: 6–23; Ж, фолликулярная фаза: 5–30; пик цикла: 75–150; после менопаузы: 30–200 мМЕ/мл",
-        "luteinizing"
+        "luteinizing",
+        "М: 6–23; Ж, фолликулярная фаза: 5–30; пик цикла: 75–150; после менопаузы: 30–200 МЕ/л"
       ],
       [
         "Гормон роста · GH",
-        "Натощак: <5 ng/mL; после стимуляции аргинином: >7 ng/mL",
-        "growth hormone соматотропин"
+        "Натощак: <5 ng/mL; стимуляция аргинином: >7 ng/mL",
+        "growth hormone соматотропин",
+        "Натощак: <5 мкг/л; стимуляция аргинином: >7 мкг/л"
       ],
       [
         "Пролактин",
         "М: <17; Ж: <25 ng/mL",
-        "prolactin"
+        "prolactin",
+        "М: <17; Ж: <25 мкг/л"
       ],
       [
         "Кортизол · 16:00",
         "3–15 μg/dL",
-        "cortisol"
+        "cortisol",
+        "82–413 нмоль/л"
       ],
       [
         "Кортизол · 20:00",
         "<50% значения в 08:00",
-        "cortisol"
+        "cortisol",
+        "<50% значения в 08:00"
       ],
       [
         "T3 общий · RIA",
         "100–200 ng/dL",
-        "triiodothyronine трийодтиронин"
+        "triiodothyronine трийодтиронин",
+        "1,5–3,1 нмоль/л"
       ],
       [
         "Захват T3 смолой",
         "25–35%",
-        "t3 resin uptake"
+        "t3 resin uptake",
+        "25–35%"
       ],
       [
         "T4 общий",
         "5–12 μg/dL",
-        "thyroxine тироксин"
+        "thyroxine тироксин",
+        "64–155 нмоль/л"
       ],
       [
         "Захват ¹²³I щитовидной железой",
         "8–30% введённой дозы за 24 ч",
-        "iodine uptake"
+        "iodine uptake",
+        "8–30% введённой дозы за 24 ч"
       ],
       [
         "17-гидроксикортикостероиды, моча",
         "М: 3–10; Ж: 2–8 мг/сут",
-        "hydroxycorticosteroids"
+        "hydroxycorticosteroids",
+        "М: 8,2–27,6; Ж: 5,5–22,0 мкмоль/сут"
       ],
       [
         "17-кетостероиды, моча",
         "М: 8–20; Ж: 6–15 мг/сут",
-        "ketosteroids"
+        "ketosteroids",
+        "М: 28–70; Ж: 21–52 мкмоль/сут"
       ]
     ]
   ],
@@ -351,17 +417,20 @@
       [
         "pH",
         "7,35–7,45",
-        "кислотность"
+        "кислотность",
+        "7,35–7,45"
       ],
       [
         "PaCO₂",
         "33–45 мм рт. ст.",
-        "paco2 pco2 углекислый"
+        "paco2 pco2 углекислый",
+        "4,4–5,9 кПа"
       ],
       [
         "PaO₂",
         "75–105 мм рт. ст.",
-        "pao2 po2 кислород"
+        "pao2 po2 кислород",
+        "10,0–14,0 кПа"
       ]
     ]
   ],
@@ -371,22 +440,26 @@
       [
         "Ферритин",
         "М: 20–250; Ж: 10–120 ng/mL",
-        "ferritin"
+        "ferritin",
+        "М: 20–250; Ж: 10–120 мкг/л"
       ],
       [
         "Железо сыворотки",
         "М: 65–175; Ж: 50–170 μg/dL",
-        "iron"
+        "iron",
+        "М: 11,6–31,3; Ж: 9,0–30,4 мкмоль/л"
       ],
       [
         "ОЖСС · TIBC",
         "250–400 μg/dL",
-        "total iron binding capacity"
+        "total iron binding capacity",
+        "44,8–71,6 мкмоль/л"
       ],
       [
         "Трансферрин",
         "200–360 mg/dL",
-        "transferrin"
+        "transferrin",
+        "2,0–3,6 г/л"
       ]
     ]
   ],
@@ -396,22 +469,26 @@
       [
         "Холестерин общий",
         "<200 mg/dL; высокий: >240 mg/dL",
-        "cholesterol total"
+        "cholesterol total",
+        "<5,2 ммоль/л; высокий: >6,2 ммоль/л"
       ],
       [
         "ЛПВП · HDL",
         "40–60 mg/dL",
-        "cholesterol"
+        "cholesterol",
+        "1,0–1,6 ммоль/л"
       ],
       [
         "ЛПНП · LDL · таблица USMLE",
-        "<160 mg/dL; не целевой уровень лечения",
-        "cholesterol"
+        "<160 mg/dL; не цель лечения",
+        "cholesterol",
+        "<4,2 ммоль/л; не цель лечения"
       ],
       [
         "Триглицериды",
         "<150 mg/dL; пограничные по таблице: 151–199 mg/dL",
-        "triglycerides"
+        "triglycerides",
+        "<1,70 ммоль/л; пограничные по таблице: 1,71–2,25 ммоль/л"
       ]
     ]
   ],
@@ -421,22 +498,26 @@
       [
         "IgA",
         "76–390 mg/dL",
-        "иммуноглобулин"
+        "иммуноглобулин",
+        "0,76–3,90 г/л"
       ],
       [
         "IgE",
         "0–380 МЕ/мл",
-        "иммуноглобулин"
+        "иммуноглобулин",
+        "0–380 кМЕ/л"
       ],
       [
         "IgG",
         "650–1500 mg/dL",
-        "иммуноглобулин"
+        "иммуноглобулин",
+        "6,5–15,0 г/л"
       ],
       [
         "IgM",
         "50–300 mg/dL",
-        "иммуноглобулин"
+        "иммуноглобулин",
+        "0,5–3,0 г/л"
       ]
     ]
   ],
@@ -446,32 +527,38 @@
       [
         "Клетки ликвора",
         "0–5 клеток/мкл",
-        "csf cell count"
+        "csf cell count",
+        "0–5 клеток/мкл"
       ],
       [
         "Хлор ликвора",
-        "118–132 ммоль/л",
-        "csf chloride"
+        "118–132 mEq/L",
+        "csf chloride",
+        "118–132 ммоль/л"
       ],
       [
         "Гамма-глобулин ликвора",
         "3–12% общего белка",
-        "csf gamma globulin"
+        "csf gamma globulin",
+        "3–12% общего белка"
       ],
       [
         "Глюкоза ликвора",
         "40–70 mg/dL",
-        "csf glucose"
+        "csf glucose",
+        "2,2–3,9 ммоль/л"
       ],
       [
         "Давление ликвора",
         "70–180 мм вод. ст.",
-        "csf pressure"
+        "csf pressure",
+        "70–180 мм вод. ст."
       ],
       [
         "Белок ликвора",
         "<40 mg/dL",
-        "csf protein"
+        "csf protein",
+        "<0,40 г/л"
       ]
     ]
   ],
@@ -481,22 +568,26 @@
       [
         "Кальций мочи",
         "100–300 мг/сут",
-        "urine calcium"
+        "urine calcium",
+        "2,5–7,5 ммоль/сут"
       ],
       [
         "Осмоляльность мочи",
         "50–1200 мОсм/кг",
-        "urine osmolality"
+        "urine osmolality",
+        "50–1200 мОсм/кг"
       ],
       [
         "Оксалат мочи",
         "8–40 μg/mL",
-        "urine oxalate"
+        "urine oxalate",
+        "90–445 мкмоль/л"
       ],
       [
         "Белок мочи",
         "<150 мг/сут",
-        "urine protein"
+        "urine protein",
+        "<0,15 г/сут"
       ]
     ]
   ],
@@ -506,7 +597,8 @@
       [
         "ИМТ · BMI · таблица USMLE",
         "19–25 кг/м²; справочный интервал этой таблицы",
-        "body mass index индекс массы тела"
+        "body mass index индекс массы тела",
+        "19–25 кг/м²; справочный интервал этой таблицы"
       ]
     ]
   ]
@@ -514,20 +606,23 @@
   const dialog = document.createElement('dialog');
   dialog.className = 'lab-dialog';
   dialog.setAttribute('aria-labelledby', 'lab-title');
-  dialog.innerHTML = `<header class="lab-header"><div><span class="lab-eyebrow">СПРАВОЧНИК · STEP 1</span><h2 id="lab-title">Нормы анализов</h2></div><button type="button" class="btn outline" data-lab-close aria-label="Закрыть памятку">Закрыть</button></header><div class="lab-filters"><label for="lab-search">Найти показатель</label><input id="lab-search" type="search" placeholder="Например, калий, Hb или TSH" autocomplete="off"><div class="lab-tabs" role="group" aria-label="Раздел анализов"></div><p class="lab-count" role="status" aria-live="polite"></p></div><div class="lab-body"><div class="lab-results"></div><p class="lab-note">Полная подборка показателей USMLE Laboratory Values (редакция апреля 2026). М — мужчины, Ж — женщины. Референсы для взрослых. Если в условии указан свой диапазон, используйте его. Для детей и при беременности нормы могут отличаться. Референсы зависят от метода; справочный диапазон не всегда совпадает с диагностическим порогом или целью лечения. Газы — артериальная кровь при дыхании комнатным воздухом.</p><p class="lab-note">В зачёте и экзамене таймер продолжает идти.</p><a class="lab-source" href="https://www.usmle.org/sites/default/files/2021-10/Step_1_Sample_Items.pdf#page=8" target="_blank" rel="noopener noreferrer">Источник: USMLE Laboratory Values, стр. 7–9 ↗</a></div>`;
+  dialog.innerHTML = `<header class="lab-header"><div><span class="lab-eyebrow">СПРАВОЧНИК · STEP 1</span><h2 id="lab-title">Нормы анализов</h2></div><button type="button" class="btn outline" data-lab-close aria-label="Закрыть памятку">Закрыть</button></header><div class="lab-filters"><div class="lab-switches"><button type="button" data-lab-unit class="btn outline">Единицы: US</button><button type="button" data-lab-formulas class="btn outline" aria-pressed="false">Формулы</button></div><label for="lab-search">Найти показатель</label><input id="lab-search" type="search" placeholder="Например, калий, Hb или TSH" autocomplete="off"><div class="lab-tabs" role="group" aria-label="Раздел анализов"></div><p class="lab-count" role="status" aria-live="polite"></p></div><div class="lab-body"><div class="lab-results"></div><p class="lab-note">Полная подборка показателей USMLE Laboratory Values (редакция апреля 2026). М — мужчины, Ж — женщины. Референсы для взрослых. Если в условии указан свой диапазон, используйте его. Для детей и при беременности нормы могут отличаться. Референсы зависят от метода; справочный диапазон не всегда совпадает с диагностическим порогом или целью лечения. Газы — артериальная кровь при дыхании комнатным воздухом.</p><p class="lab-note">В зачёте и экзамене таймер продолжает идти.</p><a class="lab-source" href="https://www.usmle.org/sites/default/files/2021-10/Step_1_Sample_Items.pdf#page=8" target="_blank" rel="noopener noreferrer">Источник: USMLE Laboratory Values, стр. 7–9 ↗</a></div>`;
   document.body.append(dialog);
   const search = dialog.querySelector('input'), results = dialog.querySelector('.lab-results');
-  let category = 'Все', origin;
+  let category = 'Все', origin, unit = 'US', formulas = false;
+  const desktop = window.matchMedia('(min-width:1100px)');
+  const practice = !document.getElementById('examContent');
   const normalize = text => text.toLowerCase().replaceAll('ё', 'е').trim();
   const tabs = dialog.querySelector('.lab-tabs');
   for (const name of ['Все', ...groups.map(g => g[0])]) {
     const button = document.createElement('button');
     button.type = 'button'; button.textContent = name;
-    button.onclick = () => { category = name; render(); };
+    button.onclick = () => { category = name; formulas=false; dialog.querySelector('[data-lab-formulas]').setAttribute('aria-pressed','false'); render(); };
     tabs.append(button);
   }
   function render() {
     const query = normalize(search.value); let count = 0;
+    if(formulas){renderFormulas();return;}
     results.replaceChildren();
     for (const button of tabs.children) button.setAttribute('aria-pressed', String(button.textContent === category));
     for (const [name, rows] of groups) {
@@ -536,23 +631,61 @@
       if (!matches.length) continue;
       const section = document.createElement('section'), heading = document.createElement('h3'), list = document.createElement('dl');
       heading.textContent = name; section.append(heading, list);
-      for (const [label, value] of matches) {
+      for (const [label, us, aliases, si] of matches) {
         const row = document.createElement('div'), term = document.createElement('dt'), definition = document.createElement('dd');
-        term.textContent = label; definition.textContent = value;
+        term.textContent = label; definition.textContent = unit === 'US' ? us : si;
         row.append(term, definition); list.append(row); count++;
       }
       results.append(section);
     }
     dialog.querySelector('.lab-count').textContent = count ? `Показателей: ${count}` : 'Ничего не найдено. Попробуйте другое название или раздел «Все».';
   }
+
+  function showReference(){
+    document.body.classList.toggle('lab-docked',desktop.matches);
+    if(desktop.matches)dialog.show();else dialog.showModal();
+  }
+  desktop.addEventListener('change',()=>{if(dialog.open){dialog.close();showReference();}});
+  dialog.querySelector('[data-lab-unit]').onclick=()=>{
+    unit=unit==='US'?'SI':'US';dialog.querySelector('[data-lab-unit]').textContent='Единицы: '+unit;render();
+  };
+  dialog.querySelector('[data-lab-formulas]').onclick=()=>{
+    formulas=!formulas;dialog.querySelector('[data-lab-formulas]').setAttribute('aria-pressed',String(formulas));render();
+  };
+  function renderFormulas(){
+    results.replaceChildren();
+    for(const button of tabs.children)button.setAttribute('aria-pressed','false');
+    dialog.querySelector('.lab-count').textContent=practice?'Учебные калькуляторы · поля при смене единиц очищаются':'Формулы · в экзаменах калькуляторы отключены';
+    const specs=[
+      {id:'gap',title:'Анионная разница',formula:'AG = Na − (Cl + HCO₃)',note:'Без калия. Референс зависит от лаборатории и альбумина; гипоальбуминемия снижает AG.',fields:[['na','Na','ммоль/л'],['cl','Cl','ммоль/л'],['hco','HCO₃','ммоль/л']]},
+      {id:'winter',title:'Формула Уинтера',formula:'Ожидаемое PaCO₂ = 1,5 × HCO₃ + 8 ± 2 мм рт. ст.',note:'Только для оценки дыхательной компенсации при метаболическом ацидозе. Выше ожидаемого — возможен дополнительный респираторный ацидоз, ниже — алкалоз.',fields:[['hco','HCO₃','ммоль/л']]},
+      {id:'osm',title:'Расчётная осмоляльность',formula:unit==='US'?'2 × Na + глюкоза / 18 + BUN / 2,8':'2 × Na + глюкоза + мочевина',note:'Na — измеренный. Результат приблизительный, мОсм/кг; формула не учитывает этанол и другие неучтённые осмолы. В SI вводите мочевину, не BUN.',fields:[['na','Na','ммоль/л'],['glucose','Глюкоза',unit==='US'?'mg/dL':'ммоль/л'],['urea',unit==='US'?'BUN':'Мочевина',unit==='US'?'mg/dL':'ммоль/л']]}
+    ];
+    for(const spec of specs){
+      if(search.value && !normalize(spec.title+' '+spec.formula).includes(normalize(search.value)))continue;
+      const section=document.createElement('section'),h=document.createElement('h3'),f=document.createElement('p'),note=document.createElement('p');
+      h.textContent=spec.title;f.textContent=spec.formula;note.textContent=spec.note;note.className='lab-note';section.append(h,f,note);
+      if(practice){
+        const form=document.createElement('form'),out=document.createElement('output');form.className='lab-calc';const inputs={};
+        for(const [key,label,units] of spec.fields){const wrap=document.createElement('label'),input=document.createElement('input');wrap.textContent=label+' ('+units+')';input.type='text';input.inputMode='decimal';input.autocomplete='off';input.setAttribute('aria-label',wrap.textContent);inputs[key]=input;wrap.append(input);form.append(wrap);}
+        const button=document.createElement('button');button.type='submit';button.className='btn outline';button.textContent='Рассчитать';out.setAttribute('aria-live','polite');form.append(button,out);
+        form.onsubmit=e=>{e.preventDefault();const values={};for(const [key,input] of Object.entries(inputs)){const raw=input.value.trim().replace(',','.');if(!/^\d+(\.\d+)?$/.test(raw)||!Number.isFinite(Number(raw))||Number(raw)>100000){out.textContent='Введите числа от 0 до 100000 во все поля.';return;}values[key]=Number(raw);}out.textContent=window.LabCalculations.calculate(spec.id,values,unit);};
+        section.append(form);
+      }
+      const source=document.createElement('a');source.href='https://vimbook.vumc.org/nephrology/acid-base';source.target='_blank';source.rel='noopener noreferrer';source.className='lab-source';source.textContent='Источник: Vanderbilt · Acid-Base ↗';section.append(source);results.append(section);
+    }
+    if(!results.children.length)dialog.querySelector('.lab-count').textContent='Формулы не найдены. Очистите поиск.';
+  }
+
   search.addEventListener('input', render);
   document.addEventListener('click', event => {
     const button = event.target.closest('[data-lab-open]'); if (!button) return;
-    origin = button; render(); dialog.showModal();
+    origin = button; render(); if(!dialog.open)showReference();
     dialog.querySelector('[data-lab-close]').focus();
   });
   dialog.querySelector('[data-lab-close]').onclick = () => dialog.close();
-  dialog.addEventListener('close', () => { if (origin?.isConnected) origin.focus({preventScroll:true}); });
+  dialog.addEventListener('close', () => { if(dialog.open)return; document.body.classList.remove('lab-docked'); if (origin?.isConnected) origin.focus({preventScroll:true}); });
   // Keep question shortcuts from changing an answer while the reference is open.
-  document.addEventListener('keydown', event => { if (dialog.open) event.stopImmediatePropagation(); }, true);
+  document.addEventListener('keydown', event => { if (dialog.open && (!desktop.matches || dialog.contains(event.target))) event.stopImmediatePropagation();
+    if(dialog.open && desktop.matches && event.key==='Escape' && !document.querySelector('dialog:modal')) dialog.close(); }, true);
 })();
