@@ -10,3 +10,15 @@
 .lab-switches{display:flex;gap:8px;margin-bottom:12px}.lab-switches button{min-height:40px;font-size:12px}.lab-switches button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 .lab-calc{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.lab-calc label{font-size:12px;flex:1 1 100px}.lab-calc input{box-sizing:border-box;display:block;width:100%;min-height:42px;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px}.lab-calc output{flex-basis:100%;font-weight:600;margin-bottom:10px}
 @media(min-width:1100px){body.lab-docked{padding-right:440px}body.lab-docked .app{width:100%;box-sizing:border-box}.lab-docked .lab-dialog{position:fixed;inset:12px 12px 12px auto;width:416px;height:calc(100dvh - 24px);margin:0;z-index:1000}.lab-docked .lab-header,.lab-docked .lab-filters{padding-left:16px;padding-right:16px}.lab-docked .lab-header h2{font-size:20px}.lab-docked .lab-body{padding-left:16px;padding-right:16px}}
+/* Restrained motion: values change together, never count through intermediate values. */
+.lab-trigger,.lab-tabs button,.lab-switches button{transition:background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 100ms ease}
+@media(hover:hover){.lab-trigger:hover{box-shadow:0 3px 10px #0002;border-color:var(--ink)}}
+.lab-trigger:active{transform:scale(.98)}
+.lab-switches .lab-unit{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;gap:0;min-width:112px;padding:3px;isolation:isolate;overflow:hidden}
+.lab-unit>span:not(.lab-unit-indicator){position:relative;padding:6px 12px;z-index:1;transition:color 160ms ease}
+.lab-unit-indicator{position:absolute;inset:3px auto 3px 3px;width:calc(50% - 3px);border-radius:6px;background:var(--ink);transition:transform 180ms cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.lab-unit[data-unit=SI] .lab-unit-indicator{transform:translateX(100%)}
+.lab-unit[data-unit=US]>span:nth-child(2),.lab-unit[data-unit=SI]>span:nth-child(3){color:var(--bg)}
+.lab-calc output:not(:empty){padding:10px 12px;border-radius:8px;border:1px solid var(--line);line-height:1.5}
+.lab-calc output[data-state=stale]{font-weight:400;border-style:dashed}
+@media(prefers-reduced-motion:reduce){.lab-trigger,.lab-tabs button,.lab-switches button,.lab-unit>span,.lab-unit-indicator{transition:none!important}.lab-trigger:active{transform:none}}

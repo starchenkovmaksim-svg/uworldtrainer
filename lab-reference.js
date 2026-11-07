@@ -606,18 +606,28 @@
   const dialog = document.createElement('dialog');
   dialog.className = 'lab-dialog';
   dialog.setAttribute('aria-labelledby', 'lab-title');
-  dialog.innerHTML = `<header class="lab-header"><div><span class="lab-eyebrow">СПРАВОЧНИК · STEP 1</span><h2 id="lab-title">Нормы анализов</h2></div><button type="button" class="btn outline" data-lab-close aria-label="Закрыть памятку">Закрыть</button></header><div class="lab-filters"><div class="lab-switches"><button type="button" data-lab-unit class="btn outline">Единицы: US</button><button type="button" data-lab-formulas class="btn outline" aria-pressed="false">Формулы</button></div><label for="lab-search">Найти показатель</label><input id="lab-search" type="search" placeholder="Например, калий, Hb или TSH" autocomplete="off"><div class="lab-tabs" role="group" aria-label="Раздел анализов"></div><p class="lab-count" role="status" aria-live="polite"></p></div><div class="lab-body"><div class="lab-results"></div><p class="lab-note">Полная подборка показателей USMLE Laboratory Values (редакция апреля 2026). М — мужчины, Ж — женщины. Референсы для взрослых. Если в условии указан свой диапазон, используйте его. Для детей и при беременности нормы могут отличаться. Референсы зависят от метода; справочный диапазон не всегда совпадает с диагностическим порогом или целью лечения. Газы — артериальная кровь при дыхании комнатным воздухом.</p><p class="lab-note">В зачёте и экзамене таймер продолжает идти.</p><a class="lab-source" href="https://www.usmle.org/sites/default/files/2021-10/Step_1_Sample_Items.pdf#page=8" target="_blank" rel="noopener noreferrer">Источник: USMLE Laboratory Values, стр. 7–9 ↗</a></div>`;
+  dialog.innerHTML = `<header class="lab-header"><div><span class="lab-eyebrow">СПРАВОЧНИК · STEP 1</span><h2 id="lab-title">Нормы анализов</h2></div><button type="button" class="btn outline" data-lab-close aria-label="Закрыть памятку">Закрыть</button></header><div class="lab-filters"><div class="lab-switches"><button type="button" data-lab-unit data-unit="US" class="btn outline lab-unit" aria-label="Единицы: US. Переключить на SI"><span class="lab-unit-indicator" aria-hidden="true"></span><span>US</span><span>SI</span></button><button type="button" data-lab-formulas class="btn outline" aria-pressed="false">Формулы</button></div><label for="lab-search">Найти показатель</label><input id="lab-search" type="search" placeholder="Например, калий, Hb или TSH" autocomplete="off"><div class="lab-tabs" role="group" aria-label="Раздел анализов"></div><p class="lab-count" role="status" aria-live="polite"></p></div><div class="lab-body"><div class="lab-results"></div><p class="lab-note">Полная подборка показателей USMLE Laboratory Values (редакция апреля 2026). М — мужчины, Ж — женщины. Референсы для взрослых. Если в условии указан свой диапазон, используйте его. Для детей и при беременности нормы могут отличаться. Референсы зависят от метода; справочный диапазон не всегда совпадает с диагностическим порогом или целью лечения. Газы — артериальная кровь при дыхании комнатным воздухом.</p><p class="lab-note">В зачёте и экзамене таймер продолжает идти.</p><a class="lab-source" href="https://www.usmle.org/sites/default/files/2021-10/Step_1_Sample_Items.pdf#page=8" target="_blank" rel="noopener noreferrer">Источник: USMLE Laboratory Values, стр. 7–9 ↗</a></div>`;
   document.body.append(dialog);
   const search = dialog.querySelector('input'), results = dialog.querySelector('.lab-results');
   let category = 'Все', origin, unit = 'US', formulas = false;
   const desktop = window.matchMedia('(min-width:1100px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const motions = new Map();
+  function motion(element,frames,duration=180){
+    motions.get(element)?.cancel();motions.delete(element);
+    if(reducedMotion.matches||!element.animate)return;
+    const animation=element.animate(frames,{duration,easing:'cubic-bezier(.2,.7,.2,1)'});
+    motions.set(element,animation);animation.onfinish=()=>{if(motions.get(element)===animation)motions.delete(element);};
+  }
+  reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){for(const animation of motions.values())animation.cancel();motions.clear();}});
+  function revealResults(){motion(results,[{opacity:.35,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}]);}
   const practice = !document.getElementById('examContent');
   const normalize = text => text.toLowerCase().replaceAll('ё', 'е').trim();
   const tabs = dialog.querySelector('.lab-tabs');
   for (const name of ['Все', ...groups.map(g => g[0])]) {
     const button = document.createElement('button');
     button.type = 'button'; button.textContent = name;
-    button.onclick = () => { category = name; formulas=false; dialog.querySelector('[data-lab-formulas]').setAttribute('aria-pressed','false'); render(); };
+    button.onclick = () => { category = name; formulas=false; dialog.querySelector('[data-lab-formulas]').setAttribute('aria-pressed','false'); render(); revealResults(); };
     tabs.append(button);
   }
   function render() {
@@ -644,13 +654,14 @@
   function showReference(){
     document.body.classList.toggle('lab-docked',desktop.matches);
     if(desktop.matches)dialog.show();else dialog.showModal();
+    motion(dialog,[{opacity:0,transform:desktop.matches?'translateX(20px)':'translateY(14px)'},{opacity:1,transform:'translate(0,0)'}],220);
   }
   desktop.addEventListener('change',()=>{if(dialog.open){dialog.close();showReference();}});
   dialog.querySelector('[data-lab-unit]').onclick=()=>{
-    unit=unit==='US'?'SI':'US';dialog.querySelector('[data-lab-unit]').textContent='Единицы: '+unit;render();
+    unit=unit==='US'?'SI':'US';const control=dialog.querySelector('[data-lab-unit]');control.setAttribute('data-unit',unit);control.setAttribute('aria-label','Единицы: '+unit+'. Переключить на '+(unit==='US'?'SI':'US'));render();motion(results,[{opacity:.25},{opacity:1}],160);
   };
   dialog.querySelector('[data-lab-formulas]').onclick=()=>{
-    formulas=!formulas;dialog.querySelector('[data-lab-formulas]').setAttribute('aria-pressed',String(formulas));render();
+    formulas=!formulas;dialog.querySelector('[data-lab-formulas]').setAttribute('aria-pressed',String(formulas));render();revealResults();
   };
   function renderFormulas(){
     results.replaceChildren();
@@ -669,7 +680,8 @@
         const form=document.createElement('form'),out=document.createElement('output');form.className='lab-calc';const inputs={};
         for(const [key,label,units] of spec.fields){const wrap=document.createElement('label'),input=document.createElement('input');wrap.textContent=label+' ('+units+')';input.type='text';input.inputMode='decimal';input.autocomplete='off';input.setAttribute('aria-label',wrap.textContent);inputs[key]=input;wrap.append(input);form.append(wrap);}
         const button=document.createElement('button');button.type='submit';button.className='btn outline';button.textContent='Рассчитать';out.setAttribute('aria-live','polite');form.append(button,out);
-        form.onsubmit=e=>{e.preventDefault();const values={};for(const [key,input] of Object.entries(inputs)){const raw=input.value.trim().replace(',','.');if(!/^\d+(\.\d+)?$/.test(raw)||!Number.isFinite(Number(raw))||Number(raw)>100000){out.textContent='Введите числа от 0 до 100000 во все поля.';return;}values[key]=Number(raw);}out.textContent=window.LabCalculations.calculate(spec.id,values,unit);};
+        form.addEventListener('input',()=>{if(!out.textContent)return;motions.get(out)?.cancel();motions.delete(out);out.textContent='Данные изменены — пересчитать';out.setAttribute('data-state','stale');button.textContent='Пересчитать';});
+        form.onsubmit=e=>{e.preventDefault();motions.get(out)?.cancel();motions.delete(out);out.setAttribute('data-state','error');const values={};for(const [key,input] of Object.entries(inputs)){const raw=input.value.trim().replace(',','.');if(!/^\d+(\.\d+)?$/.test(raw)||!Number.isFinite(Number(raw))||Number(raw)>100000){out.textContent='Введите числа от 0 до 100000 во все поля.';return;}values[key]=Number(raw);}out.textContent=window.LabCalculations.calculate(spec.id,values,unit);out.setAttribute('data-state','ready');button.textContent='Рассчитать';motion(out,[{opacity:.35,transform:'translateY(4px)',backgroundColor:'var(--line)'},{opacity:1,transform:'translateY(0)',backgroundColor:'transparent'}],320);};
         section.append(form);
       }
       const source=document.createElement('a');source.href='https://vimbook.vumc.org/nephrology/acid-base';source.target='_blank';source.rel='noopener noreferrer';source.className='lab-source';source.textContent='Источник: Vanderbilt · Acid-Base ↗';section.append(source);results.append(section);
@@ -684,7 +696,7 @@
     dialog.querySelector('[data-lab-close]').focus();
   });
   dialog.querySelector('[data-lab-close]').onclick = () => dialog.close();
-  dialog.addEventListener('close', () => { if(dialog.open)return; document.body.classList.remove('lab-docked'); if (origin?.isConnected) origin.focus({preventScroll:true}); });
+  dialog.addEventListener('close', () => { if(dialog.open)return; for(const animation of motions.values())animation.cancel();motions.clear(); document.body.classList.remove('lab-docked'); if (origin?.isConnected) origin.focus({preventScroll:true}); });
   // Keep question shortcuts from changing an answer while the reference is open.
   document.addEventListener('keydown', event => { if (dialog.open && (!desktop.matches || dialog.contains(event.target))) event.stopImmediatePropagation();
     if(dialog.open && desktop.matches && event.key==='Escape' && !document.querySelector('dialog:modal')) dialog.close(); }, true);

@@ -24,7 +24,7 @@ unitButton.onclick();assert.equal(results.children[0].children[1].children[0].ch
 search.value='';search.events.input();formulaButton.onclick();assert.equal(results.children.length,3);
 let form=results.children[0].children.find(e=>e.className==='lab-calc');
 form.children[0].children[0].value='140';form.children[1].children[0].value='104';form.children[2].children[0].value='24';form.onsubmit({preventDefault(){}});assert.equal(form.children.at(-1).textContent,'12 ммоль/л');
-form.children[0].children[0].value='';form.onsubmit({preventDefault(){}});assert.ok(form.children.at(-1).textContent.includes('Введите'));
+form.events.input();assert.equal(form.children.at(-1).textContent,'Данные изменены — пересчитать');assert.equal(form.children.at(-1).attributes['data-state'],'stale');form.children[0].children[0].value='';form.onsubmit({preventDefault(){}});assert.ok(form.children.at(-1).textContent.includes('Введите'));
 // Desktop is non-modal, and resizing back to mobile restores a modal.
 media.matches=true;events.click({target:{closest:()=>origin}});assert.equal(dialog.modal,false);
 blocked=false;events.keydown({target:origin,stopImmediatePropagation(){blocked=true}});assert.equal(blocked,false);
