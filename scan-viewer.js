@@ -85,9 +85,9 @@
     const status=document.createElement('p');status.className='scan-load-status';status.setAttribute('role','status');status.hidden=true;holder.append(status);
     function loaded(){holder.classList.remove('scan-loading');holder.removeAttribute('aria-busy');status.hidden=true;}
     function failed(){loaded();status.textContent='Не удалось загрузить изображение. Проверьте соединение и обновите страницу.';status.hidden=false;holder.classList.add('scan-load-error');}
-    source.addEventListener('load',()=>{const wasLoading=holder.classList.contains('scan-loading');loaded();holder.classList.remove('scan-load-error');if(wasLoading)source.classList.add('scan-loaded');});
+    source.addEventListener('load',()=>{loaded();holder.classList.remove('scan-load-error');source.classList.add('scan-loaded');});
     source.addEventListener('error',failed);
-    if(!source.complete){holder.classList.add('scan-loading');holder.setAttribute('aria-busy','true');status.textContent='Загружаем изображение…';status.hidden=false;}else if(!source.naturalWidth)failed();
+    if(!source.complete){holder.classList.add('scan-loading');holder.setAttribute('aria-busy','true');status.textContent='Загружаем изображение…';status.hidden=false;}else if(!source.naturalWidth)failed();else source.classList.add('scan-loaded');
     source.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();open(source);}});
   }}
   document.addEventListener('click',e=>{const source=e.target.closest('img[data-scan-ready]');if(!source)return;e.preventDefault();e.stopImmediatePropagation();open(source);},true);
