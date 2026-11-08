@@ -613,10 +613,10 @@
   const desktop = window.matchMedia('(min-width:1100px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const motions = new Map();
-  function motion(element,frames,duration=180){
+  function motion(element,frames,duration=180,easing='cubic-bezier(.2,.7,.2,1)'){
     motions.get(element)?.cancel();motions.delete(element);
     if(reducedMotion.matches||!element.animate)return;
-    const animation=element.animate(frames,{duration,easing:'cubic-bezier(.2,.7,.2,1)'});
+    const animation=element.animate(frames,{duration,easing});
     motions.set(element,animation);animation.onfinish=()=>{if(motions.get(element)===animation)motions.delete(element);};
   }
   reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){for(const animation of motions.values())animation.cancel();motions.clear();}});
@@ -654,7 +654,7 @@
   function showReference(){
     document.body.classList.toggle('lab-docked',desktop.matches);
     if(desktop.matches)dialog.show();else dialog.showModal();
-    motion(dialog,[{opacity:0,transform:desktop.matches?'translateX(20px)':'translateY(14px)'},{opacity:1,transform:'translate(0,0)'}],220);
+    motion(dialog,[{opacity:0,transform:desktop.matches?'translateX(36px)':'translateY(24px)'},{opacity:1,transform:'translate(0,0)'}],420,'cubic-bezier(.22,1,.36,1)');
   }
   desktop.addEventListener('change',()=>{if(dialog.open){dialog.close();showReference();}});
   dialog.querySelector('[data-lab-unit]').onclick=()=>{
