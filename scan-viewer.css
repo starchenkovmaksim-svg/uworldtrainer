@@ -13,3 +13,15 @@
   .scan-help{padding-bottom:max(8px,env(safe-area-inset-bottom))}
 }
 @media(max-height:500px){.scan-toolbar strong,.scan-help{display:none}.scan-toolbar{padding:4px 8px}.scan-controls{width:100%;justify-content:center}}
+
+.scan-holder{position:relative}
+.scan-loading>.scan-frame{min-height:160px;background:var(--bg);border:1px solid var(--line);box-sizing:border-box}
+.scan-loading>.scan-frame>img{opacity:0}
+.scan-load-status{font-size:13px;color:var(--ink);padding:12px;text-align:center;margin:0}
+.scan-loading>.scan-load-status{position:absolute;top:64px;left:12px;right:12px;pointer-events:none}
+.scan-loading>.scan-load-status::before{content:'';display:inline-block;vertical-align:-3px;width:14px;height:14px;margin-right:9px;border:2px solid var(--line);border-top-color:var(--ink);border-radius:50%;animation:scan-loading-turn 1.2s linear infinite}
+.scan-loaded{animation:scan-loaded-in 320ms cubic-bezier(.4,0,.2,1)}
+@keyframes scan-loaded-in{from{opacity:0}to{opacity:1}}
+@keyframes scan-loading-turn{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.scan-loaded,.scan-loading>.scan-load-status::before{animation:none!important}}
+[data-motion=off] .scan-loaded,[data-motion=off] .scan-loading>.scan-load-status::before{animation:none!important}

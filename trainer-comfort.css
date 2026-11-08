@@ -1,5 +1,5 @@
 
-.top{flex-wrap:wrap}.top>div:first-child{margin-right:auto}.theme-toggle{font-size:12px;white-space:nowrap;min-height:42px;margin-left:8px}.question-dock{position:sticky;top:8px;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 4px 16px #18233412}.dock-title{font-size:13px;font-weight:650;min-width:0}.dock-actions{display:flex;gap:6px;flex-shrink:0}.dock-actions .btn{padding:8px 11px;font-size:13px;min-height:40px}.exam-dock{font-size:13px;font-weight:600}.toolbar{z-index:4}.toolbar .dock-actions{flex-wrap:wrap}.action-toast{position:fixed;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;max-width:calc(100vw - 32px);width:max-content;padding:11px 18px;border-radius:12px;background:#203149;color:#fff;box-shadow:0 5px 22px #0002;font-size:13px;pointer-events:none;animation:trainer-fade-in .16s ease}.report-dialog #reportStatus:not(:empty){padding:10px;border-radius:8px;background:#edf5f1;color:#236849}
+.top{flex-wrap:wrap}.top>div:first-child{margin-right:auto}.theme-toggle{font-size:12px;white-space:nowrap;min-height:42px;margin-left:8px}.question-dock{position:sticky;top:8px;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 4px 16px #18233412}.dock-title{font-size:13px;font-weight:650;min-width:0}.dock-actions{display:flex;gap:6px;flex-shrink:0}.dock-actions .btn{padding:8px 11px;font-size:13px;min-height:40px}.exam-dock{font-size:13px;font-weight:600}.toolbar{z-index:4}.toolbar .dock-actions{flex-wrap:wrap}.action-toast{position:fixed;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;max-width:calc(100vw - 32px);width:max-content;padding:11px 18px;border-radius:12px;background:#203149;color:#fff;box-shadow:0 5px 22px #0002;font-size:13px;pointer-events:none;animation:trainer-fade-in 280ms var(--motion-ease)}.report-dialog #reportStatus:not(:empty){padding:10px;border-radius:8px;background:#edf5f1;color:#236849}
 html[data-theme=dark]{color-scheme:dark;--bg:#151b23;--ink:#e1e8f0;--muted:#a4b3c5;--line:#354150;--accent:#70b9de;--blue:#8dbced;--good:#7ed0a4;--bad:#f2a1a1}
 [data-theme=dark] :is(.card,.block,.catalog-card,.block.catalog-card,.topic-entry,.account-dialog,.image-dialog,.toolbar,.question-dock,.account-icon){background:#202933;color:var(--ink);box-shadow:none}
 [data-theme=dark] :is(.btn,.btn.outline,.choice,.dot,.report-dialog select,.report-dialog textarea,.search){background:#27323f;color:var(--ink);border-color:var(--line)}
@@ -41,13 +41,13 @@ html[data-theme=dark]{color-scheme:dark;--bg:#151b23;--ink:#e1e8f0;--muted:#a4b3
 
 /* Quiet navigation feedback; state colors and bookmark stripe remain intact. */
 @media(prefers-reduced-motion:no-preference){
-  html[data-theme=dark]:not([data-motion=off]) .dots .dot.now{animation:question-number-in 220ms ease-out}
+  html[data-theme=dark]:not([data-motion=off]) .dots .dot.now{animation:question-number-in 280ms var(--motion-ease)}
   @media(hover:hover) and (pointer:fine){
     html[data-theme=dark]:not([data-motion=off]) .dots .dot:not(:disabled):hover{transform:translateY(-2px);filter:brightness(1.12)}
     html[data-theme=dark]:not([data-motion=off]) .dots .dot:not(:disabled):active{transform:translateY(0);filter:brightness(1.02)}
   }
 }
-html[data-theme=dark] .dots .dot{transition:transform 150ms ease-out,filter 150ms ease-out,border-color 150ms ease-out,background-color 150ms ease-out}
+html[data-theme=dark] .dots .dot{transition:transform 180ms var(--motion-ease),filter 180ms var(--motion-ease),border-color 180ms var(--motion-ease),background-color 180ms var(--motion-ease)}
 @keyframes question-number-in{from{filter:brightness(1.3)}to{filter:brightness(1)}}
 
 /* State colors must outrank neutral/hover styling and remain legible after grading. */

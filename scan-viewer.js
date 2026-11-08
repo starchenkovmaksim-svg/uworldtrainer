@@ -82,6 +82,12 @@
     const holder=document.createElement('div');holder.className='scan-holder';const viewport=document.createElement('div');viewport.className='scan-frame';source.before(holder);holder.append(viewport);viewport.append(source);
     const controls=document.createElement('div');controls.className='scan-inline-tools';controls.innerHTML='<button type="button" data-enlarge>Увеличить страницу</button><button type="button" data-original hidden>Вся страница</button>';holder.append(controls);controls.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();});controls.querySelector('[data-enlarge]').onclick=()=>open(source);
     const original=controls.querySelector('[data-original]');let uncropped=false;const apply=()=>{const box=bounds(source);if(!box[0])return;const width=crop(viewport,source,box,uncropped);viewport.style.maxWidth=Math.min(1000,width*1.25)+'px';original.hidden=box[2]===box[0];original.textContent=uncropped?'Без пустых полей':'Вся страница';};original.onclick=()=>{uncropped=!uncropped;apply();};source.addEventListener('load',apply);if(source.complete)apply();
+    const status=document.createElement('p');status.className='scan-load-status';status.setAttribute('role','status');status.hidden=true;holder.append(status);
+    function loaded(){holder.classList.remove('scan-loading');holder.removeAttribute('aria-busy');status.hidden=true;}
+    function failed(){loaded();status.textContent='Не удалось загрузить изображение. Проверьте соединение и обновите страницу.';status.hidden=false;holder.classList.add('scan-load-error');}
+    source.addEventListener('load',()=>{const wasLoading=holder.classList.contains('scan-loading');loaded();holder.classList.remove('scan-load-error');if(wasLoading)source.classList.add('scan-loaded');});
+    source.addEventListener('error',failed);
+    if(!source.complete){holder.classList.add('scan-loading');holder.setAttribute('aria-busy','true');status.textContent='Загружаем изображение…';status.hidden=false;}else if(!source.naturalWidth)failed();
     source.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();open(source);}});
   }}
   document.addEventListener('click',e=>{const source=e.target.closest('img[data-scan-ready]');if(!source)return;e.preventDefault();e.stopImmediatePropagation();open(source);},true);

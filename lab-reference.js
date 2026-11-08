@@ -613,9 +613,9 @@
   const desktop = window.matchMedia('(min-width:1100px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const motions = new Map();
-  function motion(element,frames,duration=180,easing='cubic-bezier(.2,.7,.2,1)'){
+  function motion(element,frames,duration=180,easing='cubic-bezier(.4,0,.2,1)'){
     motions.get(element)?.cancel();motions.delete(element);
-    if(reducedMotion.matches||!element.animate)return;
+    if(reducedMotion.matches||document.documentElement?.dataset.motion==='off'||!element.animate)return;
     const animation=element.animate(frames,{duration,easing});
     motions.set(element,animation);animation.onfinish=()=>{if(motions.get(element)===animation)motions.delete(element);};
   }
