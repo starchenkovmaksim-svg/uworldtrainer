@@ -654,7 +654,7 @@
   function showReference(){
     document.body.classList.toggle('lab-docked',desktop.matches);
     if(desktop.matches)dialog.show();else dialog.showModal();
-    motion(dialog,[{opacity:0,transform:desktop.matches?'translateX(36px)':'translateY(24px)'},{opacity:1,transform:'translate(0,0)'}],420,'cubic-bezier(.22,1,.36,1)');
+    motion(dialog,[{opacity:0,transform:desktop.matches?'translateX(36px)':'translateY(24px)'},{opacity:1,transform:'translate(0,0)'}],480,'cubic-bezier(.4,0,.2,1)');
   }
   desktop.addEventListener('change',()=>{if(dialog.open){dialog.close();showReference();}});
   dialog.querySelector('[data-lab-unit]').onclick=()=>{

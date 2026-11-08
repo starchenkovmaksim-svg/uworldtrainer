@@ -9,7 +9,7 @@
 @media(max-height:460px){.lab-eyebrow,.lab-filters label{display:none}.lab-header{padding:8px 16px}.lab-header h2{font-size:18px}.lab-filters{padding-bottom:6px}.lab-count{margin-top:4px}}
 .lab-switches{display:flex;gap:8px;margin-bottom:12px}.lab-switches button{min-height:40px;font-size:12px}.lab-switches button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 .lab-calc{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.lab-calc label{font-size:12px;flex:1 1 100px}.lab-calc input{box-sizing:border-box;display:block;width:100%;min-height:42px;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px}.lab-calc output{flex-basis:100%;font-weight:600;margin-bottom:10px}
-@media(min-width:1100px){body.lab-docked{padding-right:440px}body.lab-docked .app{width:100%;box-sizing:border-box}.lab-docked .lab-dialog{position:fixed;inset:12px 12px 12px auto;width:416px;height:calc(100dvh - 24px);margin:0;z-index:1000}.lab-docked .lab-header,.lab-docked .lab-filters{padding-left:16px;padding-right:16px}.lab-docked .lab-header h2{font-size:20px}.lab-docked .lab-body{padding-left:16px;padding-right:16px}}
+@media(min-width:1100px){body{transition:padding-right 480ms cubic-bezier(.4,0,.2,1)}body.lab-docked{padding-right:440px}.lab-docked .lab-dialog{position:fixed;inset:12px 12px 12px auto;width:416px;height:calc(100dvh - 24px);margin:0;z-index:1000}.lab-docked .lab-header,.lab-docked .lab-filters{padding-left:16px;padding-right:16px}.lab-docked .lab-header h2{font-size:20px}.lab-docked .lab-body{padding-left:16px;padding-right:16px}}
 /* Restrained motion: values change together, never count through intermediate values. */
 .lab-trigger,.lab-tabs button,.lab-switches button{transition:background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 100ms ease}
 @media(hover:hover){.lab-trigger:hover{box-shadow:0 3px 10px #0002;border-color:var(--ink)}}
@@ -22,3 +22,5 @@
 .lab-calc output:not(:empty){padding:10px 12px;border-radius:8px;border:1px solid var(--line);line-height:1.5}
 .lab-calc output[data-state=stale]{font-weight:400;border-style:dashed}
 @media(prefers-reduced-motion:reduce){.lab-trigger,.lab-tabs button,.lab-switches button,.lab-unit>span,.lab-unit-indicator{transition:none!important}.lab-trigger:active{transform:none}}
+
+@media(prefers-reduced-motion:reduce){body{transition:none!important}}
